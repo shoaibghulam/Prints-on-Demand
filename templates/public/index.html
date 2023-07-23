@@ -1,0 +1,358 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'main/main.css' %}">
+    
+</head>
+<body>
+ <div class="border-b-2 border-solid border-[#f2f2f6]">
+    <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center  py-6 px-10 gap-5">
+            <!-- logo start -->
+            <div class="w-full md:!w-1/6	text-center">
+                <h1 class="text-2xl i-700 ">Brand Logo</h1>
+            </div>
+            <!-- logo end -->
+            <!-- search box start -->
+            <div class="w-full md:!w-2/4">
+                
+<form>   
+    <div class="relative bg-gradient-to-r p-[2px] from-[#6EE7B7] via-[#3B82F6] to-[#462b5f] rounded-lg">
+       
+        <input type="search" id="default-search" class="search-box " placeholder="Search Arts..." required>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            
+        </div>
+       
+    </div>
+</form>
+
+            </div>
+            <!-- search box end -->
+            <!-- top menu start -->
+            <div class="i-600 text-[16px] flex space-x-2 items-center w-full md:!w-1/4">
+                <a href="#" class="menu-btn">Login</a>
+                <a href="#" class="menu-btn">Sign Up</a>
+                <a href="#" class="menu-btn text-[20px]"> <i class="fa-solid fa-heart"></i> </a>
+                <a href="#" class="menu-btn text-[20px]"> <i class="fa-solid fa-cart-shopping"></i></a>
+                <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                  </svg>
+              </button>
+            </div>
+            <!-- top menu end -->
+        </div>
+        <!-- main menu start -->
+        
+<nav class="bg-white ">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+     
+     
+      <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+        <ul class="navbar i-400">
+          <li>
+            <a href="/" class="nav-item" aria-current="page">Home</a>
+          </li>
+          
+
+
+
+
+
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="dropdown-btn i-400">Clothing
+                 <i class="fa-solid fa-chevron-down pl-2"></i></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow  md:w-60 w-full ">
+                
+                  <ul class="py-2 text-[16px] i-400 text-gray-70" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item </a>
+                    </li>
+                  
+                   
+                  </ul>
+                
+              </div>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="dropdown-btn i-400">Stickers  <i class="fa-solid fa-chevron-down pl-2"></i></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow  md:w-60 w-full ">
+                  <ul class="py-2 text-[16px] i-400 text-gray-70" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item </a>
+                    </li>
+                  
+                   
+                  </ul>
+                
+              </div>
+          </li>
+        
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="dropdown-btn i-400">Wall Art  <i class="fa-solid fa-chevron-down pl-2"></i></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow  md:w-60 w-full ">
+                  <ul class="py-2 text-[16px] i-400 text-gray-70" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item </a>
+                    </li>
+                  
+                   
+                  </ul>
+                
+              </div>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="dropdown-btn i-400">Home & Living  <i class="fa-solid fa-chevron-down pl-2"></i></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow  md:w-60 w-full ">
+                  <ul class="py-2 text-[16px] i-400 text-gray-70" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item </a>
+                    </li>
+                  
+                   
+                  </ul>
+                
+              </div>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="dropdown-btn i-400">Kids & Bibes  <i class="fa-solid fa-chevron-down pl-2"></i></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow  md:w-60 w-full ">
+                  <ul class="py-2 text-[16px] i-400 text-gray-70" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item </a>
+                    </li>
+                  
+                   
+                  </ul>
+                
+              </div>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="dropdown-btn i-400">Accessories  <i class="fa-solid fa-chevron-down pl-2"></i></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow  md:w-60 w-full ">
+                  <ul class="py-2 text-[16px] i-400 text-gray-70" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item </a>
+                    </li>
+                  
+                   
+                  </ul>
+                
+              </div>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="dropdown-btn i-400">Stationary   <i class="fa-solid fa-chevron-down pl-2"></i></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow  md:w-60 w-full ">
+                  <ul class="py-2 text-[16px] i-400 text-gray-70" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">Item </a>
+                    </li>
+                  
+                   
+                  </ul>
+                
+              </div>
+          </li>
+          <li>
+            <a href="/" class="nav-item" aria-current="page">About Us</a>
+          </li>
+          <li>
+            <a href="/" class="nav-item" aria-current="page">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+        <!-- main menu end -->
+
+    </div>
+ </div>
+ <!-- hero section start -->
+ <div class="bg-[url(../images/hero.png)] bg-no-repeat h-2/3 md:h-screen bg-cover pb-10 md:pb-0">
+  <div class="container m-auto">
+<div class="w-full md:w-2/3 m-auto text-center text-white pt-3 md:pt-36">
+<h1 class="i-500 text-2xl md:text-[61px]">Brand <span class="text-primary">Name is Heart</span>  of Arts</h1>
+<p class="i-300 text-smd md:text-[24px] leading-2 md:leading-9  px-2 md:px-20 py-5">
+  A simple solution for creating and selling products that engage
+your fans and help you monetize your content.
+No cost, no hassle, no risk.
+</p>
+<p class="pt-10">
+  <a href="#" class="py-5 px-10 hover:bg-white hover:text-primary i-400 text-[18px] bg-primary text-white rounded ease-in duration-500 hover:duration-500 hover:ease-out">Start Creating</a>
+</p>
+</div>
+ </div>
+</div>
+ <!-- hero section end -->
+ <!-- Vesion Start -->
+ <div class="bg-[#F7F7F7] py-14">
+  <div class="container m-auto px-2 md:px-20">
+<h1 class="i-700 text-3xl md:text-4xl  text-black text-center">
+  What makes Your Demand superior
+
+</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 space-y-10 md:space-y-0 text-center pt-20 justify-start">
+  <!-- gird box start -->
+  <div class="text-[#353740] space-y-0 md:space-y-4 px-10">
+    <i class="fa-solid fa-shirt text-8xl text-primary"></i>
+    <h1 class="i-700 text-2xl">400+ Print on demand products
+    </h1>
+    <p class="text-[#747d88] text-sm i-400 leading-7">
+      Make it easier to publish products with your custom designs, more actual display effect
+
+
+    </p>
+  </div>
+  <!-- gird box end -->
+  <!-- gird box start -->
+  <div class="text-[#353740] space-y-0 md:space-y-4 px-10">
+    
+    <i class="fa-solid fa-pen-nib text-8xl text-primary"></i>
+    <h1 class="i-700 text-2xl">Mockup generator </h1>
+    <p class="text-[#747d88] text-sm i-400 leading-7">Make it easier to publish products with your custom designs, more actual display effect
+
+    </p>
+  </div>
+  <!-- gird box end -->
+  <!-- gird box start -->
+  <div class="text-[#353740] space-y-0 md:space-y-4 px-10">
+   
+    <i class="fa-solid fa-hourglass text-8xl text-primary"></i>
+    <h1 class="i-700 text-2xl">Automatic/manual orders
+      </h1>
+    <p class="text-[#747d88] text-sm i-400 leading-7">Free to manage & process order manually/automatically with less time cost
+
+    </p>
+  </div>
+  <!-- gird box end -->
+</div>
+  </div>
+
+ </div>
+ <!-- Vesion end -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+
+</body>
+</html>
