@@ -13,13 +13,12 @@
 </head>
 <body>
 {% include "public/layout/navbar.html" %}    
-{% block body %}
-{% endblock body %}
-   {% include 'public/layout/footer.html' %}
-  
-  
+<main id="wrapper">
+  {% block body %}{% endblock body %}
+</main>
+{% include 'public/layout/footer.html' %}
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 {% block script %}{% endblock script %}
 </body>
 </html>

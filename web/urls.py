@@ -5,5 +5,4 @@ urlpatterns = [
     path('about',About.as_view(),name="about"),
     path('contact',Contact.as_view(),name="contact"),
     path('faq',Faq.as_view(),name="faq"),
-    
 ]
