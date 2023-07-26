@@ -1,0 +1,71 @@
+{% extends "public/layout/base.html" %}
+{% load static %}
+{% block body %}
+<section>
+    <div class="tw-flex tw-items-center tw-min-h-screen tw-p-4 tw-bg-gray-100 lg:tw-justify-center">
+        <div
+          class="tw-flex tw-flex-col tw-overflow-hidden tw-bg-white tw-rounded-md tw-shadow-lg max md:tw-flex-row md:tw-flex-1 lg:tw-max-w-screen-md"
+        >
+          <div
+            class="tw-p-4 tw-py-6 tw-text-white tw-bg-primary md:tw-w-80 md:tw-flex-shrink-0 md:tw-flex md:tw-flex-col md:tw-items-center md:tw-justify-evenly"
+          >
+            <div class="tw-my-3 tw-text-4xl tw-font-bold tw-tracking-wider tw-text-center">
+              <a href="#">Brand Name</a>
+            </div>
+            <p class="tw-mt-6 tw-font-normal tw-text-center tw-text-gray-100 md:tw-mt-0">
+             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa molestiae tempore aut necessitatibus amet facere, ea laboriosam repellendus culpa facilis! Laborum perspiciatis accusantium nihil aperiam numquam dicta magni laboriosam sit?
+            </p>
+            <p class="tw-flex tw-flex-col tw-items-center tw-justify-center tw-mt-10 tw-text-center">
+              <span>Don't have an account?</span>
+              <a href="/signup" class="tw-underline">Get Started!</a>
+            </p>
+           
+          </div>
+          <div class="tw-p-5 tw-bg-white md:tw-flex-1">
+            <h3 class="tw-my-4 tw-text-2xl tw-font-semibold tw-text-gray-700">Account Login</h3>
+            <form action="" method="post" class="tw-flex tw-flex-col tw-space-y-5">
+              {% csrf_token %}
+              <div class="tw-flex tw-flex-col tw-space-y-1">
+                <label for="email" class="tw-text-sm tw-font-semibold tw-text-gray-500">Email address</label>
+                <input
+                  type="email"
+                  id="email"
+                  autofocus
+                  class="tw-px-4 tw-py-2 tw-transition tw-duration-300 tw-border tw-border-gray-300 tw-rounded focus:tw-border-transparent focus:tw-outline-none focus:tw-ring-4 focus:tw-ring-blue-200"
+                />
+              </div>
+              <div class="tw-flex tw-flex-col tw-space-y-1">
+                <div class="tw-flex tw-items-center tw-justify-between">
+                  <label for="password" class="tw-text-sm tw-font-semibold tw-text-gray-500">Password</label>
+                  <a href="#" class="tw-text-sm tw-text-primary hover:tw-underline focus:tw-text-red-600">Forgot Password?</a>
+                </div>
+                <input
+                  type="password"
+                  id="password"
+                  class="tw-px-4 tw-py-2 tw-transition tw-duration-300 tw-border tw-border-gray-300 tw-rounded focus:tw-border-transparent focus:tw-outline-none focus:tw-ring-4 focus:tw-ring-blue-200"
+                />
+              </div>
+              <div class="tw-flex tw-items-center tw-space-x-2">
+                <input
+                  type="checkbox"
+                  id="remember"
+                  class="tw-w-4 tw-h-4 tw-transition tw-duration-300 tw-rounded focus:tw-ring-2 focus:tw-ring-offset-0 focus:tw-outline-none focus:tw-ring-blue-200"
+                />
+                <label for="remember" class="tw-text-sm tw-font-semibold tw-text-gray-500">Remember me</label>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="tw-w-full tw-px-4 tw-py-2 tw-text-lg tw-font-semibold tw-text-white tw-transition-colors tw-duration-300 tw-bg-primary tw-rounded-md tw-shadow  focus:tw-outline-none focus:tw-ring-blue-200 focus:tw-ring-4"
+                >
+                  Log in
+                </button>
+              </div>
+            
+            </form>
+          </div>
+        </div>
+      </div>
+</section>
+  
+{% endblock body %}

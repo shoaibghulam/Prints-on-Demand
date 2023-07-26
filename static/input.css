@@ -57,3 +57,8 @@
   min-height: calc(100vh - 140px);
   margin-top: 70px;
 }
+.about-hero{
+  background: url('../images/hero.png') no-repeat;
+  background-size: cover;
+
+}
