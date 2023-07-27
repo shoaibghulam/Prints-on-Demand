@@ -57,8 +57,18 @@
   min-height: calc(100vh - 140px);
   margin-top: 70px;
 }
-.about-hero{
-  background: url('../images/hero.png') no-repeat;
-  background-size: cover;
 
+.about-hero{ 
+  @apply tw-relative tw-bg-black/[0.7];
+}
+.about-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../images/hero.jpg') no-repeat fixed; 
+  background-size: cover;
+  z-index: -1;
 }

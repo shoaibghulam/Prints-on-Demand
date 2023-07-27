@@ -15,10 +15,6 @@ class Contact(View):
         return render(request,"public/contact.html")
 
 
-class Faq(View):
-    def get(self, request):
-        return render(request,"public/faq.html")
-
 class Login(View):
     def get(self, request):
        

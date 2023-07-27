@@ -1,0 +1,33 @@
+{% extends "public/layout/base.html" %}
+{% load static %}
+{% block body %}
+<section>
+    <div class="tw-flex tw-items-center tw-p-4 tw-bg-gray-100 lg:tw-justify-center" style="min-height: calc(100vh - 140px);">
+        <div class="tw-flex tw-flex-col tw-overflow-hidden tw-bg-white tw-rounded-md tw-shadow-lg max md:tw-flex-row md:tw-flex-1 lg:tw-max-w-screen-md">
+          <div class="tw-p-4 tw-py-6 tw-text-white tw-bg-primary md:tw-w-80 tw-flex tw-flex-wrap tw-items-between">
+            <div class="tw-w-full">
+              <div class="tw-my-3 tw-text-4xl tw-font-bold tw-tracking-wider tw-text-center">
+                <a href="#">Brand Name</a>
+              </div>
+              <p class="tw-mt-6 tw-font-normal tw-text-center tw-text-gray-100 md:tw-mt-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa molestiae tempore aut necessitatibus amet facere, ea laboriosam repellendus culpa facilis! Laborum perspiciatis accusantium nihil aperiam numquam dicta magni laboriosam sit?</p>
+            </div>
+            <div class="tw-flex tw-flex-wrap tw-items-end tw-justify-center tw-text-center tw-w-full">
+              <div class="tw-w-full tw-mt-10">
+                {% block action_btn %}
+                  <p>Don't have an account?</p>
+                  <a href="/signup" class="tw-underline">Get Started!</a>
+                {% endblock action_btn %}
+              </div>
+            </div>
+           
+          </div>
+          <div class="tw-p-5 tw-bg-white md:tw-flex-1">
+            {% block content %}
+              
+            {% endblock content %}
+          </div>
+        </div>
+      </div>
+</section>
+  
+{% endblock body %}

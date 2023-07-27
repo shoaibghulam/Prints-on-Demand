@@ -1,13 +1,12 @@
 {% extends "public/layout/base.html" %}
 {% load static %}
 {% block body %}
-<section>
-    <header class="about-hero tw-h-[70vh]">
-      <div class="tw-w-2/3 tw-m-auto tw-flex tw-items-center pt-20">
+<section class="tw-mt-[70px]">
+    <header class="about-hero ">
+      <div class="md:tw-w-2/3 tw-m-auto tw-flex tw-items-center tw-min-h-[200px] md:tw-min-h-[500px] xl:tw-min-h-[400px]">
 
         <h1 class="tw-text-center tw-text-white tw-font-[700] tw-text-3xl md:tw-text-7xl tw-uppercase">
           Turning your ideas into brands, products, and community
-          
         </h1>
       </div>
     </header>
@@ -62,55 +61,55 @@
       <!-- items end -->
  
     </div>
-    <div class="tw-bg-primary tw-py-20 ">
-      <div class="tw-pb-4 tw-text-center">
+    <div class="tw-bg-primary tw-py-5 ">
+      <!-- <div class="tw-pb-4 tw-text-center">
         <h1 class="tw-text-3xl tw-font-bold  tw-text-white">Our Success in Numbers </h1>
-      </div> 
+      </div>  -->
    <div class="tw-container tw-m-auto tw-px-2 md:tw-px-20 tw-py-10">
-    <div class="tw-bg-white tw-rounded-lg tw-max-w-screen-xl lg:tw-mx-auto tw-grid lg:tw-grid-cols-5">
+    <div class="tw-text-white tw-rounded-lg tw-max-w-screen-xl lg:tw-mx-auto tw-grid lg:tw-grid-cols-5">
 
 
-      <div class=" tw-border-b  tw-border-gray-300 tw-h-full tw-text-center tw-p-8 lg:tw-border-b-0 lg:tw-border-r lg:tw-p-6">
+      <div class="tw-h-full tw-text-center tw-px-8">
           <div class="tw-font-semibold tw-text-4xl tw-leading-none tw-mb-2">
               20 years
           </div>
           <div class="tw-font-medium tw-leading-none tw-mb-2">
-              Print-on-demand experience
+              of experience
           </div>
       </div>
 
-      <div class=" tw-border-b lg:tw-border-b-0 lg:tw-border-r tw-border-gray-300 tw-h-full tw-text-center tw-p-8 lg:tw-p-6">
+      <div class=" tw-h-full tw-text-center tw-px-8 lg:tw-px-6">
           <div class="tw-font-semibold tw-text-4xl tw-leading-none tw-mb-2">
               50K+
           </div>
-          <div class="tw-font-medium tw-leading-none tw-mb-2 tw-text-gray-600">
+          <div class="tw-font-medium tw-leading-none tw-mb-2">
               Items produced daily
           </div>
       </div>
 
-      <div class="tw-border-b lg:tw-border-b-0 lg:tw-border-r tw-border-gray-300 tw-h-full tw-text-center tw-p-8 lg:tw-p-6">
+      <div class="tw-h-full tw-text-center tw-px-8 lg:tw-px-6">
           <div class="tw-font-semibold tw-text-4xl tw-leading-none tw-mb-2">
               95%
           </div>
-          <div class="tw-font-medium tw-leading-none tw-mb-2 tw-text-gray-600">
+          <div class="tw-font-medium tw-leading-none tw-mb-2">
               Shipped out in 48 hours
           </div>
       </div>
 
-      <div class="tw-border-b lg:tw-border-b-0 lg:tw-border-r tw-border-gray-300 tw-h-full tw-text-center tw-p-8 lg:tw-p-6">
+      <div class="tw-h-full tw-text-center tw-px-8 lg:tw-px-6">
           <div class="tw-font-semibold tw-text-4xl tw-leading-none tw-mb-2">
               9.8M
           </div>
-          <div class="tw-font-medium tw-leading-none tw-mb-2 tw-text-gray-600">
+          <div class="tw-font-medium tw-leading-none tw-mb-2">
               Items shipped in 2020
           </div>
       </div>
 
-      <div class=" tw-h-full tw-text-center tw-p-8 lg:tw-p-6">
+      <div class=" tw-h-full tw-text-center tw-px-8 lg:tw-px-6">
           <div class="tw-font-semibold tw-text-4xl tw-leading-none tw-mb-2">
               99.3%
           </div>
-          <div class="tw-font-medium tw-leading-none tw-mb-2 tw-text-gray-600">
+          <div class="tw-font-medium tw-leading-none tw-mb-2">
               Customer satisfaction
           </div>
       </div>
@@ -118,7 +117,7 @@
   </div>
    </div>
   </div>
-  <div class="lg:tw-bg-gray-100 mt-10">
+  <section>
     <div class="tw-container tw-m-auto tw-px-2 md:tw-px-20 tw-py-20">
      
          <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-4 tw-space-y-10 md:tw-space-y-0 md:tw-gap-20 tw-text-[#222222] text-center md:tw-text-left">
@@ -201,8 +200,8 @@
          </div>
      
   </div>
-  </div>
-<div class="tw-mt-20 tw-bg-[#F8F8F8] body-font">
+</section>
+<div class="tw-bg-gray-100 body-font">
  
     <div class="container tw-px-5 tw-py-24 tw-mx-auto">
       <h1 class="tw-text-3xl tw-font-bold  tw-text-gray-900 tw-mb-12 tw-text-center">Customers say this about us
@@ -253,7 +252,8 @@
       <img src="{% static "images/faq.png" %}" alt="faq" class="tw-m-auto tw-w-1/42">
    </div>
   <!-- accordion start-->
-  <div class="tw-w-full md:tw-w-5/6 tw-m-auto">    
+  <div class="tw-w-full tw-container tw-m-auto">    
+    <div class="tw-max-w-3xl tw-mx-auto">
     <div id="accordion-color" data-accordion="collapse" data-active-classes="tw-bg-primary tw-text-white">
     <!-- item start -->
      <h2 id="accordion-color-heading-1 " class="tw-group">
@@ -323,6 +323,7 @@
    
    </div>
   </div>
+</div>
 
    
 <!-- accordion end -->
