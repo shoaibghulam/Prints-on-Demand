@@ -31,3 +31,26 @@ class Login(View):
 class Signup(View):
     def get(self, request):
         return render(request,"public/signup.html")
+
+
+class ForgetPassword(View):
+    def get(self, request):
+       
+        return render(request,"public/forget-password.html")
+ 
+class ResetPassword(View):
+    def get(self, request):
+       
+        return render(request,"public/reset-password.html")
+ 
+
+class LogOut(View):
+    def get(self, request):
+        if request.session.has_key('login'):
+            del request.session['login']
+            return redirect("/")
+        
+
+class Cart(View):
+    def get(self, request):
+        return render(request, 'public/cart.html')
