@@ -10,4 +10,5 @@ urlpatterns = [
     path('forgot-password',ForgetPassword.as_view(),name="forget-password"),
     path('reset-password',ResetPassword.as_view(),name="reset-password"),
     path('cart',Cart.as_view(),name="cart"),
+    path('dashboard',Dashboard.as_view(),name="dashboard"),
 ]

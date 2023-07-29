@@ -50,3 +50,7 @@ class LogOut(View):
 class Cart(View):
     def get(self, request):
         return render(request, 'public/cart.html')
+
+class Dashboard(View):
+    def get(self, request):
+        return render(request, 'public/dashboard.html')

@@ -1,0 +1,94 @@
+{% extends 'public/layout/profile-base.html' %}
+{% block breadcrumb %}
+<nav class="tw-flex" aria-label="Breadcrumb">
+  <ol class="tw-inline-flex tw-items-center tw-space-x-1 md:tw-space-x-3">
+    <li class="tw-inline-flex tw-items-center">
+      <a href="#" class="tw-inline-flex tw-items-center tw-text-f14 tw-font-normal tw-text-gray-700 hover:tw-text-blue-600 dark:tw-text-gray-400 dark:hover:tw-text-white">
+        <svg class="tw-w-3 tw-h-3 tw-mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+        </svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <div class="tw-flex tw-items-center">
+        <svg class="tw-w-3 tw-h-3  tw-mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+        <a href="#" class="tw-ml-1 tw-text-f14 tw-font-normal  ">Shop</a>
+      </div>
+    </li>
+    <li aria-current="page">
+      <div class="tw-flex tw-items-center">
+        <svg class="tw-w-3 tw-h-3 tw-mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+        <span class="tw-ml-1 tw-text-f14 tw-font-normal  md:tw-ml-2 ">Dashboard</span>
+      </div>
+    </li>
+  </ol>
+</nav>
+{% endblock breadcrumb %}
+{% block prfilebody %}
+
+<div class=" tw-border tw-border-solid tw-border-gray-200">
+  <div class="tw-border tw-border-gray-200 tw-py-3 tw-flex tw-flex-row tw-justify-between tw-items-center tw-px-10 tw-bg-gray-100">
+      <h2 class="tw-text-f16 tw-font-bold">michel@example.com</h2>
+      <a href="#" class="t-outline-btn">
+          <i class="fa-solid fa-pencil tw-pr-2 tw-text-14"></i> edit profile
+      </a>
+  </div>
+</div>
+<div class="tw-border tw-border-solid tw-border-gray-200 tw-mt-5 tw-p-5">
+ <div class="tw-grid tw-grid-cols-3 tw-items-center tw-gap-4">
+  <!-- item start -->
+  <a href="#" class="tw-border tw-border-solid tw-border-gray-200 tw-flex tw-flex-col tw-text-center tw-justify-center tw-py-14 tw-space-y-3">
+      
+     
+          <i class="fa-solid fa-basket-shopping tw-text-4xl"></i>
+          <p>Orders</p>
+  </a>
+  <!-- item end -->
+  <!-- item start -->
+  <a href="#" class="tw-border tw-border-solid tw-border-gray-200 tw-flex tw-flex-col tw-text-center tw-justify-center tw-py-14 tw-space-y-3">
+      
+  
+          <i class="fa-solid fa-heart tw-text-4xl"></i>
+          <p>Wishlist</p>
+  </a>
+  <!-- item end -->
+  <!-- item start -->
+  <a href="#" class="tw-border tw-border-solid tw-border-gray-200 tw-flex tw-flex-col tw-text-center tw-justify-center tw-py-14 tw-space-y-3">
+      
+  
+          <i class="fa-solid fa-rotate-left tw-text-4xl"></i>
+          <p>Returns</p>
+  </a>
+  <!-- item end -->
+  <!-- item start -->
+  <a href="#" class="tw-border tw-border-solid tw-border-gray-200 tw-flex tw-flex-col tw-text-center tw-justify-center tw-py-14 tw-space-y-3">
+      
+  
+          <i class="fa-solid fa-street-view tw-text-4xl"></i>
+          <p>Address</p>
+  </a>
+  <!-- item end -->
+  <!-- item start -->
+  <a href="#" class="tw-border tw-border-solid tw-border-gray-200 tw-flex tw-flex-col tw-text-center tw-justify-center tw-py-14 tw-space-y-3">
+      
+  
+          <i class="fa-solid fa-gift tw-text-4xl"></i>
+          <p>Coupons</p>
+  </a>
+  <!-- item end -->
+  <!-- item start -->
+  <a href="#" class="tw-border tw-border-solid tw-border-gray-200 tw-flex tw-flex-col tw-text-center tw-justify-center tw-py-14 tw-space-y-3">
+      
+  
+          <i class="fa-solid fa-user tw-text-4xl"></i>
+          <p>Profile Details</p>
+  </a>
+  <!-- item end -->
+ </div>
+</div>
+{% endblock prfilebody %}

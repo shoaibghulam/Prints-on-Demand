@@ -1,0 +1,74 @@
+{% extends "public/layout/base.html" %}
+{% load static %}
+{% block body %}
+
+<div class="tw-py-4 tw-border-b tw-border-gray-200">
+<div class="tw-container tw-px-5  tw-mx-auto">
+    {% block breadcrumb %}
+  
+    {% endblock breadcrumb %}
+</div> 
+
+</div>
+<div class="tw-container tw-px-5  tw-mx-auto tw-mt-10">
+    <div class="tw-border tw-border-gray-200 tw-py-2 px-2">
+        <h2 class="tw-text-2xl tw-font-bold">Account - Dashboard
+        </h2>
+    </div>
+</div>
+<div class="tw-container tw-px-5  tw-mx-auto tw-mt-10">
+   <div class="tw-flex tw-flex-col md:tw-flex-row tw-gap-10">
+    <div class="tw-hidden md:tw-block tw-w-full md:tw-w-1/4">
+        <ul class="tw-border tw-border-solid tw-border-gray-200">
+            <li class="tw-px-4 tw-py-3 hover:tw-text-white hover:tw-bg-primary tw-font-normal tw-text-f16 tw-flex tw-flex-row tw-items-center tw-gap-2 tw-bg-primary tw-text-white">
+                <i class="fa-solid fa-house tw-text-sm"></i>
+                <a href="#" class="tw-w-full">Dashboard</a>
+            </li>
+            <li class="tw-px-4 tw-py-3 hover:tw-text-white hover:tw-bg-primary tw-font-normal tw-text-f16 tw-flex tw-flex-row tw-items-center tw-gap-2 tw-border-t tw-border-solid tw-border-gray-200">
+                <i class="fa-solid fa-basket-shopping tw-text-sm"></i>
+                <a href="#" class="tw-w-full">Orders</a>
+            </li>
+            
+            <li class="tw-px-4 tw-py-3 hover:tw-text-white hover:tw-bg-primary tw-font-normal tw-text-f16 tw-flex tw-flex-row tw-items-center tw-gap-2 tw-border-t tw-border-solid tw-border-gray-200">
+                <i class="fa-solid fa-user tw-text-sm"></i>
+                <a href="#" class="tw-w-full">Profile</a>
+            </li>
+            <li class="tw-px-4 tw-py-3 hover:tw-text-white hover:tw-bg-primary tw-font-normal tw-text-f16 tw-flex tw-flex-row tw-items-center tw-gap-2 tw-border-t tw-border-solid tw-border-gray-200">
+                <i class="fa-solid fa-pencil tw-text-sm"></i>
+                
+                <a href="#" class="tw-w-full">Edit Profile</a>
+            </li>
+            <li class="tw-px-4 tw-py-3 hover:tw-text-white hover:tw-bg-primary tw-font-normal tw-text-f16 tw-flex tw-flex-row tw-items-center tw-gap-2 tw-border-t tw-border-solid tw-border-gray-200">
+                <i class="fa-solid fa-street-view tw-text-sm"></i>
+                
+                <a href="#" class="tw-w-full">Saved Address</a>
+            </li>
+            
+            <li class="tw-px-4 tw-py-3 hover:tw-text-white hover:tw-bg-primary tw-font-normal tw-text-f16 tw-flex tw-flex-row tw-items-center tw-gap-2 tw-border-t tw-border-solid tw-border-gray-200">
+                <i class="fa-solid fa-heart tw-text-sm"></i>
+                
+                <a href="#" class="tw-w-full">Wishlist</a>
+            </li>
+            <li class="tw-px-4 tw-py-3 hover:tw-text-white hover:tw-bg-primary tw-font-normal tw-text-f16 tw-flex tw-flex-row tw-items-center tw-gap-3 tw-border-t tw-border-solid tw-border-gray-200">
+                <i class="fa-solid  fa-right-from-bracket"></i>
+                
+                <a href="#" class="tw-w-full">Logout</a>
+            </li>
+            
+            
+           
+            
+            
+           
+        </ul>
+    </div>
+    <div class="tw-w-full md:tw-h-3/4">
+   {% block prfilebody %}
+     
+   {% endblock prfilebody %}
+</div>
+   </div>
+</div>
+  
+  
+{% endblock body %}
