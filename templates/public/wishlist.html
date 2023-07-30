@@ -1,0 +1,207 @@
+{% extends "public/layout/base.html" %}
+{% load static %}
+{% block body %}
+
+<div class="tw-container tw-px-5 tw-pt-[44px]  tw-mx-auto">
+    <nav class="tw-flex" aria-label="Breadcrumb">
+        <ol class="tw-inline-flex tw-items-center tw-space-x-1 md:tw-space-x-3">
+          <li class="tw-inline-flex tw-items-center">
+            <a href="#" class="tw-inline-flex tw-items-center tw-text-f14 tw-font-normal tw-text-gray-700 hover:tw-text-blue-600 dark:tw-text-gray-400 dark:hover:tw-text-white">
+              <svg class="tw-w-3 tw-h-3 tw-mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <div class="tw-flex tw-items-center">
+              <svg class="tw-w-3 tw-h-3  tw-mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+              </svg>
+              <a href="#" class="tw-ml-1 tw-text-f14 tw-font-normal  ">Shop</a>
+            </div>
+          </li>
+          <li aria-current="page">
+            <div class="tw-flex tw-items-center">
+              <svg class="tw-w-3 tw-h-3 tw-mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+              </svg>
+              <span class="tw-ml-1 tw-text-f14 tw-font-normal  md:tw-ml-2 ">Dashboard</span>
+            </div>
+          </li>
+        </ol>
+      </nav>
+</div> 
+
+</div>
+<div class="tw-container tw-px-5  tw-mx-auto tw-mt-10">
+    <div class="tw-border tw-border-gray-200 tw-py-2 px-2">
+        <h2 class="tw-text-2xl tw-font-bold">
+            Account - Wishlist
+        </h2>
+    </div>
+</div>
+
+<div class="tw-mx-auto container tw-px-4 md:tw-px-6 2xl:tw-px-0 tw-py-12 tw-flex tw-justify-center tw-items-center">
+  
+      <div class=" tw-grid tw-grid-cols-1 lg:tw-grid-cols-4 tw-gap-x-8 tw-gap-y-10 ">
+    <!-- item start -->
+        <div class="tw-flex tw-flex-col">
+          <div class="tw-relative">
+            <img class="tw-hidden lg:tw-block" src="https://i.ibb.co/SsmkhPq/Rectangle-23.png" alt="bag" />
+            <img class="tw-hidden sm:tw-block lg:tw-hidden" src="https://i.ibb.co/ZH9FmZL/Rectangle-23-1.png" alt="bag" />
+            <img class="sm:tw-hidden" src="https://i.ibb.co/cyN26yn/Rectangle-23.png" alt="bag" />
+            <button aria-label="close" class="tw-top-4 tw-right-4 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-800 tw-absolute tw-p-1.5 tw-bg-primary  tw-text-white hover:tw-text-gray-400">
+              <svg class="fil-current" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 1L1 13" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1 1L13 13" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="tw-mt-6 tw-flex tw-justify-between tw-items-center">
+            <div class="tw-flex tw-justify-center tw-items-center">
+              <a href="#" class="tw-tracking-tight tw-text-2xl tw-font-semibold tw-leading-6 tw-text-gray-800 dark:tw-text-white">New York Streak</a>
+            </div>
+           
+          </div>
+          <div id="menu1" class="tw-flex tw-flex-col md:tw-flex-row tw-justify-start tw-items-start tw-gap-10 ">
+           
+            <div class="tw-mt-6">
+              <p class="tw-tracking-tight tw-text-base tw-font-medium tw-leading-4 tw-text-gray-800 dark:tw-text-white">42 size</p>
+            </div>
+            <div class="tw-mt-6">
+              <p class="tw-tracking-tight tw-text-base tw-font-medium tw-leading-4 tw-text-gray-800 dark:tw-text-white">$1,000</p>
+            </div>
+        
+          </div>
+        </div>
+  <!-- item end -->
+    <!-- item start -->
+        <div class="tw-flex tw-flex-col">
+          <div class="tw-relative">
+            <img class="tw-hidden lg:tw-block" src="https://i.ibb.co/SsmkhPq/Rectangle-23.png" alt="bag" />
+            <img class="tw-hidden sm:tw-block lg:tw-hidden" src="https://i.ibb.co/ZH9FmZL/Rectangle-23-1.png" alt="bag" />
+            <img class="sm:tw-hidden" src="https://i.ibb.co/cyN26yn/Rectangle-23.png" alt="bag" />
+            <button aria-label="close" class="tw-top-4 tw-right-4 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-800 tw-absolute tw-p-1.5 tw-bg-primary  tw-text-white hover:tw-text-gray-400">
+              <svg class="fil-current" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 1L1 13" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1 1L13 13" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="tw-mt-6 tw-flex tw-justify-between tw-items-center">
+            <div class="tw-flex tw-justify-center tw-items-center">
+              <a href="#" class="tw-tracking-tight tw-text-2xl tw-font-semibold tw-leading-6 tw-text-gray-800 dark:tw-text-white">New York Streak</a>
+            </div>
+           
+          </div>
+          <div id="menu1" class="tw-flex tw-flex-col md:tw-flex-row tw-justify-start tw-items-start tw-gap-10 ">
+           
+            <div class="tw-mt-6">
+              <p class="tw-tracking-tight tw-text-base tw-font-medium tw-leading-4 tw-text-gray-800 dark:tw-text-white">42 size</p>
+            </div>
+            <div class="tw-mt-6">
+              <p class="tw-tracking-tight tw-text-base tw-font-medium tw-leading-4 tw-text-gray-800 dark:tw-text-white">$1,000</p>
+            </div>
+        
+          </div>
+        </div>
+  <!-- item end -->
+    <!-- item start -->
+        <div class="tw-flex tw-flex-col">
+          <div class="tw-relative">
+            <img class="tw-hidden lg:tw-block" src="https://i.ibb.co/SsmkhPq/Rectangle-23.png" alt="bag" />
+            <img class="tw-hidden sm:tw-block lg:tw-hidden" src="https://i.ibb.co/ZH9FmZL/Rectangle-23-1.png" alt="bag" />
+            <img class="sm:tw-hidden" src="https://i.ibb.co/cyN26yn/Rectangle-23.png" alt="bag" />
+            <button aria-label="close" class="tw-top-4 tw-right-4 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-800 tw-absolute tw-p-1.5 tw-bg-primary  tw-text-white hover:tw-text-gray-400">
+              <svg class="fil-current" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 1L1 13" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1 1L13 13" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="tw-mt-6 tw-flex tw-justify-between tw-items-center">
+            <div class="tw-flex tw-justify-center tw-items-center">
+              <a href="#" class="tw-tracking-tight tw-text-2xl tw-font-semibold tw-leading-6 tw-text-gray-800 dark:tw-text-white">New York Streak</a>
+            </div>
+           
+          </div>
+          <div id="menu1" class="tw-flex tw-flex-col md:tw-flex-row tw-justify-start tw-items-start tw-gap-10 ">
+           
+            <div class="tw-mt-6">
+              <p class="tw-tracking-tight tw-text-base tw-font-medium tw-leading-4 tw-text-gray-800 dark:tw-text-white">42 size</p>
+            </div>
+            <div class="tw-mt-6">
+              <p class="tw-tracking-tight tw-text-base tw-font-medium tw-leading-4 tw-text-gray-800 dark:tw-text-white">$1,000</p>
+            </div>
+        
+          </div>
+        </div>
+  <!-- item end -->
+    <!-- item start -->
+        <div class="tw-flex tw-flex-col">
+          <div class="tw-relative">
+            <img class="tw-hidden lg:tw-block" src="https://i.ibb.co/SsmkhPq/Rectangle-23.png" alt="bag" />
+            <img class="tw-hidden sm:tw-block lg:tw-hidden" src="https://i.ibb.co/ZH9FmZL/Rectangle-23-1.png" alt="bag" />
+            <img class="sm:tw-hidden" src="https://i.ibb.co/cyN26yn/Rectangle-23.png" alt="bag" />
+            <button aria-label="close" class="tw-top-4 tw-right-4 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-800 tw-absolute tw-p-1.5 tw-bg-primary  tw-text-white hover:tw-text-gray-400">
+              <svg class="fil-current" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 1L1 13" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1 1L13 13" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="tw-mt-6 tw-flex tw-justify-between tw-items-center">
+            <div class="tw-flex tw-justify-center tw-items-center">
+              <a href="#" class="tw-tracking-tight tw-text-2xl tw-font-semibold tw-leading-6 tw-text-gray-800 dark:tw-text-white">New York Streak</a>
+            </div>
+           
+          </div>
+          <div id="menu1" class="tw-flex tw-flex-col md:tw-flex-row tw-justify-start tw-items-start tw-gap-10 ">
+           
+            <div class="tw-mt-6">
+              <p class="tw-tracking-tight tw-text-base tw-font-medium tw-leading-4 tw-text-gray-800 dark:tw-text-white">42 size</p>
+            </div>
+            <div class="tw-mt-6">
+              <p class="tw-tracking-tight tw-text-base tw-font-medium tw-leading-4 tw-text-gray-800 dark:tw-text-white">$1,000</p>
+            </div>
+        
+          </div>
+        </div>
+  <!-- item end -->
+    <!-- item start -->
+        <div class="tw-flex tw-flex-col">
+          <div class="tw-relative">
+            <img class="tw-hidden lg:tw-block" src="https://i.ibb.co/SsmkhPq/Rectangle-23.png" alt="bag" />
+            <img class="tw-hidden sm:tw-block lg:tw-hidden" src="https://i.ibb.co/ZH9FmZL/Rectangle-23-1.png" alt="bag" />
+            <img class="sm:tw-hidden" src="https://i.ibb.co/cyN26yn/Rectangle-23.png" alt="bag" />
+            <button aria-label="close" class="tw-top-4 tw-right-4 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-800 tw-absolute tw-p-1.5 tw-bg-primary  tw-text-white hover:tw-text-gray-400">
+              <svg class="fil-current" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 1L1 13" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1 1L13 13" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="tw-mt-6 tw-flex tw-justify-between tw-items-center">
+            <div class="tw-flex tw-justify-center tw-items-center">
+              <a href="#" class="tw-tracking-tight tw-text-2xl tw-font-semibold tw-leading-6 tw-text-gray-800 dark:tw-text-white">New York Streak</a>
+            </div>
+           
+          </div>
+          <div id="menu1" class="tw-flex tw-flex-col md:tw-flex-row tw-justify-start tw-items-start tw-gap-10 ">
+           
+            <div class="tw-mt-6">
+              <p class="tw-tracking-tight tw-text-base tw-font-medium tw-leading-4 tw-text-gray-800 dark:tw-text-white">42 size</p>
+            </div>
+            <div class="tw-mt-6">
+              <p class="tw-tracking-tight tw-text-base tw-font-medium tw-leading-4 tw-text-gray-800 dark:tw-text-white">$1,000</p>
+            </div>
+        
+          </div>
+        </div>
+  <!-- item end -->
+        
+      </div>
+    </div>
+  </div>
+{% endblock body %}

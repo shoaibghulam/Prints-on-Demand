@@ -54,3 +54,20 @@ class Cart(View):
 class Dashboard(View):
     def get(self, request):
         return render(request, 'public/dashboard.html')
+
+class Profile(View):
+    def get(self, request):
+        return render(request, 'public/profile.html')
+
+class EditProfile(View):
+    def get(self, request):
+        return render(request, 'public/edit-profile.html')
+
+
+class SavedAddress(View):
+    def get(self, request):
+        return render(request, 'public/saved-address.html')
+
+class Wishlist(View):
+    def get(self, request):
+        return render(request, 'public/wishlist.html')

@@ -1,0 +1,124 @@
+{% extends 'public/layout/profile-base.html' %}
+{% block breadcrumb %}
+<nav class="tw-flex" aria-label="Breadcrumb">
+  <ol class="tw-inline-flex tw-items-center tw-space-x-1 md:tw-space-x-3">
+    <li class="tw-inline-flex tw-items-center">
+      <a href="#" class="tw-inline-flex tw-items-center tw-text-f14 tw-font-normal tw-text-gray-700 hover:tw-text-blue-600 dark:tw-text-gray-400 dark:hover:tw-text-white">
+        <svg class="tw-w-3 tw-h-3 tw-mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+        </svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <div class="tw-flex tw-items-center">
+        <svg class="tw-w-3 tw-h-3  tw-mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+        <a href="#" class="tw-ml-1 tw-text-f14 tw-font-normal  ">Shop</a>
+      </div>
+    </li>
+    <li aria-current="page">
+      <div class="tw-flex tw-items-center">
+        <svg class="tw-w-3 tw-h-3 tw-mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+        <span class="tw-ml-1 tw-text-f14 tw-font-normal  md:tw-ml-2 ">Profile</span>
+      </div>
+    </li>
+  </ol>
+</nav>
+{% endblock breadcrumb %}
+{% block pagetitle %}
+Account - Profile
+{% endblock pagetitle %}
+{% block profilebody %}
+
+
+<div class="tw-border tw-border-solid tw-border-gray-200 tw-mt-5 tw-p-5">
+
+    <div class="tw-px-5 tw-relative tw-overflow-x-auto sm:tw-rounded-lg">
+        <h1 class="tw-font-bold tw-text-xl border-b tw-border-solid tw-border-gray-200 tw-py-2">
+            Profiles Details
+        </h1>
+        <table class="tw-w-full tw-text-f16 tw-font-normal tw-mt-5 ">
+            	
+           
+           
+            
+           
+          
+            <tbody>
+                <tr class=" tw-border-b tw-border-solid tw-border-gray-200 tw-bg-gray-100">
+                   
+                    <td class="tw-px-6 tw-py-4">
+                        Full Name
+                    </td>
+                    <td class="tw-px-6 tw-py-4">
+                        Jhon Deo
+                    </td>
+                  
+                </tr>
+                <tr class=" tw-border-b tw-border-solid tw-border-gray-200 ">
+                   
+                    <td class="tw-px-6 tw-py-4">
+                        Mobile Number	
+                    </td>
+                    <td class="tw-px-6 tw-py-4">
+                        +99-85XXXXXXXX
+                    </td>
+                  
+                </tr>
+                <tr class=" tw-border-b tw-border-solid tw-border-gray-200 tw-bg-gray-100">
+                   
+                    <td class="tw-px-6 tw-py-4">
+                        Email ID	
+                    </td>
+                    <td class="tw-px-6 tw-py-4">
+                        name@example.com
+                    </td>
+                  
+                </tr>
+                <tr class=" tw-border-b tw-border-solid tw-border-gray-200 ">
+                   
+                    <td class="tw-px-6 tw-py-4">
+                        Gender		
+                    </td>
+                    <td class="tw-px-6 tw-py-4">
+                        Male
+                    </td>
+                  
+                </tr>
+                <tr class=" tw-border-b tw-border-solid tw-border-gray-200 tw-bg-gray-100">
+                   
+                    <td class="tw-px-6 tw-py-4">
+                        DOB	
+                       		
+                    </td>
+                    <td class="tw-px-6 tw-py-4">
+                        10/03/1993
+                    </td>
+                  
+                </tr>
+                <tr class=" tw-border-b tw-border-solid tw-border-gray-200 ">
+                   
+                    <td class="tw-px-6 tw-py-4">
+                        Location	
+                    </td>
+                    <td class="tw-px-6 tw-py-4">
+                        United Kingdom
+                    </td>
+                  
+                </tr>
+             
+            </tbody>
+        </table>
+        <p class="tw-py-6">
+            <a href="/edit-profile" class="t-outline-btn">
+                <i class="fa-solid fa-pencil tw-pr-2 tw-text-14"></i> edit profile
+            </a>
+        </p>
+    </div>
+    
+</div>
+{% endblock profilebody %}

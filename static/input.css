@@ -75,3 +75,9 @@
 .t-outline-btn{
   @apply tw-py-3  tw-px-5 tw-text-f16  tw-border tw-border-solid tw-border-black hover:tw-text-white hover:tw-bg-primary tw-ease-in hover:tw-duration-500 hover:tw-ease-out hover:tw-border-primary tw-font-normal  tw-uppercase;
 }
+.profile-input{
+  @apply tw-block tw-py-2.5 tw-px-0 tw-w-full tw-text-sm tw-text-gray-900 tw-bg-transparent tw-border-0 tw-border-b-2 tw-border-gray-300 tw-appearance-none  focus:tw-outline-none focus:tw-ring-0 focus:tw-border-primary ;
+}
+.profile-input-label{
+  @apply tw-text-f16 tw-font-normal ;
+}

@@ -11,4 +11,8 @@ urlpatterns = [
     path('reset-password',ResetPassword.as_view(),name="reset-password"),
     path('cart',Cart.as_view(),name="cart"),
     path('dashboard',Dashboard.as_view(),name="dashboard"),
+    path('profile',Profile.as_view(),name="profile"),
+    path('edit-profile',EditProfile.as_view(),name="edit-profile"),
+    path('saved-address',SavedAddress.as_view(),name="saved-address"),
+    path('whishlist',Wishlist.as_view(),name="whishlist"),
 ]

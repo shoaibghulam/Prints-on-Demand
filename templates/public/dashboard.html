@@ -1,4 +1,5 @@
 {% extends 'public/layout/profile-base.html' %}
+
 {% block breadcrumb %}
 <nav class="tw-flex" aria-label="Breadcrumb">
   <ol class="tw-inline-flex tw-items-center tw-space-x-1 md:tw-space-x-3">
@@ -29,12 +30,15 @@
   </ol>
 </nav>
 {% endblock breadcrumb %}
-{% block prfilebody %}
+{% block pagetitle %}
+Account - Dashboard
+{% endblock pagetitle %}
+{% block profilebody %}
 
 <div class=" tw-border tw-border-solid tw-border-gray-200">
   <div class="tw-border tw-border-gray-200 tw-py-3 tw-flex tw-flex-row tw-justify-between tw-items-center tw-px-10 tw-bg-gray-100">
       <h2 class="tw-text-f16 tw-font-bold">michel@example.com</h2>
-      <a href="#" class="t-outline-btn">
+      <a href="/edit-profile" class="t-outline-btn">
           <i class="fa-solid fa-pencil tw-pr-2 tw-text-14"></i> edit profile
       </a>
   </div>
@@ -91,4 +95,4 @@
   <!-- item end -->
  </div>
 </div>
-{% endblock prfilebody %}
+{% endblock profilebody %}
