@@ -1,0 +1,131 @@
+{% extends 'public/layout/profile-base.html' %}
+{% block breadcrumb %}
+<nav class="tw-flex" aria-label="Breadcrumb">
+  <ol class="tw-inline-flex tw-items-center tw-space-x-1 md:tw-space-x-3">
+    <li class="tw-inline-flex tw-items-center">
+      <a href="#" class="tw-inline-flex tw-items-center tw-text-f14 tw-font-normal  hover:tw-text-primary  dark:tw-text-gray-400 dark:hover:tw-text-white">
+        <svg class="tw-w-3 tw-h-3 tw-mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+        </svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <div class="tw-flex tw-items-center">
+        <svg class="tw-w-3 tw-h-3  tw-mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+        <a href="#" class="tw-ml-1 tw-text-f14 tw-font-normal  ">Shop</a>
+      </div>
+    </li>
+    <li aria-current="page">
+      <div class="tw-flex tw-items-center">
+        <svg class="tw-w-3 tw-h-3 tw-mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+        <span class="tw-ml-1 tw-text-f14 tw-font-normal  md:tw-ml-2 ">Orders</span>
+      </div>
+    </li>
+  </ol>
+</nav>
+{% endblock breadcrumb %}
+{% block pagetitle %}
+Account - Orders
+{% endblock pagetitle %}
+{% block profilebody %}
+ 
+
+<div class="tw-border tw-border-solid tw-border-gray-200 tw-mt-5 tw-p-5">
+ <div class="tw-flex tw-flex-col tw-gap-3 ">
+  <!-- item start -->
+    <div class="tw-border tw-border-solid tw-border-gray-200 ">
+        <div class="tw-flex tw-flex-col md:tw-flex-row  tw-py-2 tw-px-2">
+            <div class=" tw-w-full md:tw-w-1/5">
+                <img src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/featured-products/05.webp" class="tw-w-full" alt="">
+            </div>
+            <div class="tw-text-center md:tw-text-left tw-flex tw-flex-col tw-gap-1 tw-w-full md:tw-w-3/5 tw-px-5 tw-pt-2">
+               <h1 class="tw-text-xl tw-font-bold">AKS - Checked Straight Kurta</h1>
+               <h1 class="tw-text-f16 tw-font-normal tw-text-gray-700">Women Pink & White Printed Straight Kurta </h1>
+               <div class="tw-justify-center md:tw-justify-normal tw-flex tw-flex-row tw-gap-2 tw-mt-5 tw-py-10 md:tw-py-0">
+                <div class="tw-border tw-border-solid tw-border-black tw-p-2">
+                    Size:XLL
+                </div>
+                <div class="tw-border tw-border-solid tw-border-black tw-p-2">
+                    Qty:4
+                </div>
+               </div>
+            </div>
+            <div class="tw-w-full md:tw-w-1/5 tw-border-l bordr-gray-200 tw-border-solid tw-flex tw-flex-col  tw-gap-3 tw-text-center tw-px-2 tw-justify-center">  
+                <a href="#" class="btn-primary">
+                View  Details 
+                </a>    
+                <a href="#" class="t-outline-btn">
+                Delete  
+                </a>    
+            </div>
+        </div>
+    </div>
+    <!-- item end -->
+  <!-- item start -->
+    <div class="tw-border tw-border-solid tw-border-gray-200 ">
+        <div class="tw-flex tw-flex-col md:tw-flex-row  tw-py-2 tw-px-2">
+            <div class=" tw-w-full md:tw-w-1/5">
+                <img src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/featured-products/05.webp" class="tw-w-full" alt="">
+            </div>
+            <div class="tw-text-center md:tw-text-left tw-flex tw-flex-col tw-gap-1 tw-w-full md:tw-w-3/5 tw-px-5 tw-pt-2">
+               <h1 class="tw-text-xl tw-font-bold">AKS - Checked Straight Kurta</h1>
+               <h1 class="tw-text-f16 tw-font-normal tw-text-gray-700">Women Pink & White Printed Straight Kurta </h1>
+               <div class="tw-justify-center md:tw-justify-normal tw-flex tw-flex-row tw-gap-2 tw-mt-5 tw-py-10 md:tw-py-0">
+                <div class="tw-border tw-border-solid tw-border-black tw-p-2">
+                    Size:XLL
+                </div>
+                <div class="tw-border tw-border-solid tw-border-black tw-p-2">
+                    Qty:4
+                </div>
+               </div>
+            </div>
+            <div class="tw-w-full md:tw-w-1/5 tw-border-l bordr-gray-200 tw-border-solid tw-flex tw-flex-col  tw-gap-3 tw-text-center tw-px-2 tw-justify-center">  
+                <a href="#" class="btn-primary">
+                View  Details 
+                </a>    
+                <a href="#" class="t-outline-btn">
+                Delete  
+                </a>    
+            </div>
+        </div>
+    </div>
+    <!-- item end -->
+  <!-- item start -->
+    <div class="tw-border tw-border-solid tw-border-gray-200 ">
+        <div class="tw-flex tw-flex-col md:tw-flex-row  tw-py-2 tw-px-2">
+            <div class=" tw-w-full md:tw-w-1/5">
+                <img src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/featured-products/05.webp" class="tw-w-full" alt="">
+            </div>
+            <div class="tw-text-center md:tw-text-left tw-flex tw-flex-col tw-gap-1 tw-w-full md:tw-w-3/5 tw-px-5 tw-pt-2">
+               <h1 class="tw-text-xl tw-font-bold">AKS - Checked Straight Kurta</h1>
+               <h1 class="tw-text-f16 tw-font-normal tw-text-gray-700">Women Pink & White Printed Straight Kurta </h1>
+               <div class="tw-justify-center md:tw-justify-normal tw-flex tw-flex-row tw-gap-2 tw-mt-5 tw-py-10 md:tw-py-0">
+                <div class="tw-border tw-border-solid tw-border-black tw-p-2">
+                    Size:XLL
+                </div>
+                <div class="tw-border tw-border-solid tw-border-black tw-p-2">
+                    Qty:4
+                </div>
+               </div>
+            </div>
+            <div class="tw-w-full md:tw-w-1/5 tw-border-l bordr-gray-200 tw-border-solid tw-flex tw-flex-col  tw-gap-3 tw-text-center tw-px-2 tw-justify-center">  
+                <a href="#" class="btn-primary">
+                View  Details 
+                </a>    
+                <a href="#" class="t-outline-btn">
+                Delete  
+                </a>    
+            </div>
+        </div>
+    </div>
+    <!-- item end -->
+  
+
+    
+</div>
+{% endblock profilebody %}

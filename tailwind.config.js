@@ -12,7 +12,8 @@ module.exports = {
    
     extend: {
       colors:{
-        'primary':"#ff6759"
+        'primary':"#ff6759",
+        'secondary':"#F24536"
       },
       fontSize:{
       

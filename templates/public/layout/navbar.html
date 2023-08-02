@@ -6,7 +6,7 @@
        
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Brand Name</span>
     </a>
-    <div class="flex md:order-2">
+    <div class="flex md:tw-order-2 tw-items-center">
       {% if   request.session.login %}
       <div class="tw-flex tw-items-center tw-gap-5 md:tw-order-2">
         <a href="/cart" class="tw-text-gray-900  hover:tw-text-primary tw-text-2xl">
@@ -15,7 +15,7 @@
         </a>
         <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
           <span class="sr-only">Open user menu</span>
-          <img class="tw-w-8 tw-h-8 tw- rounded-full" src="{% static 'images/hero.png' %}" alt="user photo">
+          <img class="tw-w-8 tw-h-8 tw- rounded-full" src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/featured-products/05.webp" alt="user photo">
         </button>
         <!-- Dropdown menu -->
         <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
@@ -28,7 +28,7 @@
               <a href="/dashboard" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
             </li>
             <li>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Order</a>
+              <a href="/orders" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Order</a>
             </li>
             <li>
               <a href="/profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
@@ -55,7 +55,7 @@
 
         <i class="fa-solid fa-cart-shopping  "></i>
       </a>
-      <a href="/login"  class="login-btn i-400">Login</a>
+      <a href="/login"  class="btn-primary i-400">Login</a>
       
       {% endif %}
         <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">

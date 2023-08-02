@@ -71,3 +71,7 @@ class SavedAddress(View):
 class Wishlist(View):
     def get(self, request):
         return render(request, 'public/wishlist.html')
+
+class Orders(View):
+    def get(self, request):
+        return render(request, 'public/order.html')

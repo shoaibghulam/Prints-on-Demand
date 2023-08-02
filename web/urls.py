@@ -15,4 +15,5 @@ urlpatterns = [
     path('edit-profile',EditProfile.as_view(),name="edit-profile"),
     path('saved-address',SavedAddress.as_view(),name="saved-address"),
     path('whishlist',Wishlist.as_view(),name="whishlist"),
+    path('orders',Orders.as_view(),name="orders"),
 ]
