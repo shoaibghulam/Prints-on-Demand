@@ -75,3 +75,8 @@ class Wishlist(View):
 class Orders(View):
     def get(self, request):
         return render(request, 'public/order.html')
+    
+
+class Products(View):
+    def get(self, request):
+        return render(request, 'public/product.html')
