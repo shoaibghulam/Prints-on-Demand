@@ -17,4 +17,5 @@ urlpatterns = [
     path('whishlist',Wishlist.as_view(),name="whishlist"),
     path('orders',Orders.as_view(),name="orders"),
     path('products',Products.as_view(),name="products"),
+    path('single-product',SingleProduct.as_view(),name="single-product"),
 ]

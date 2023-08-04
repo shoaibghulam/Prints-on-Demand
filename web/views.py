@@ -80,3 +80,7 @@ class Orders(View):
 class Products(View):
     def get(self, request):
         return render(request, 'public/product.html')
+
+class SingleProduct(View):
+    def get(self, request):
+        return render(request, 'public/single-product.html')
