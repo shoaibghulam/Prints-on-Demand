@@ -84,3 +84,7 @@ class Products(View):
 class SingleProduct(View):
     def get(self, request):
         return render(request, 'public/single-product.html')
+
+class CheckOut(View):
+    def get(self, request):
+        return render(request, 'public/checkout.html')
