@@ -4,80 +4,160 @@
 <section>
    
       <div class="tw-grid sm:tw-px-10 lg:tw-grid-cols-2 lg:tw-px-20 xl:tw-px-32">
-        <div class="tw-px-4 tw-pt-8">
-          <p class="tw-text-xl tw-font-medium">Order Summary</p>
-          <p class="tw-text-gray-400">Check your items. And select a suitable shipping method.</p>
-          <div class="tw-mt-8 tw-space-y-3 tw-rounded-lg tw-border tw-bg-white tw-px-2 tw-py-4 sm:tw-px-6">
-            <div class="tw-flex tw-flex-col tw-rounded-lg tw-bg-white sm:tw-flex-row">
-              <img class="tw-m-2 tw-h-24 tw-w-28 tw-rounded-md tw-border tw-object-cover tw-object-center" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
-              <div class="tw-flex tw-w-full tw-flex-col tw-px-4 tw-py-4">
-                <span class="tw-font-semibold">Nike Air Max Pro 8888 - Super Light</span>
-                <span class="tw-float-right tw-text-gray-400">42EU - 8.5US</span>
-                <p class="tw-text-lg tw-font-bold">$138.99</p>
-              </div>
-            </div>
-            <div class="tw-flex tw-flex-col tw-rounded-lg tw-bg-white sm:tw-flex-row">
-              <img class="tw-m-2 tw-h-24 tw-w-28 tw-rounded-md tw-border tw-object-cover tw-object-center" src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
-              <div class="tw-flex tw-w-full tw-flex-col tw-px-4 tw-py-4">
-                <span class="tw-font-semibold">Nike Air Max Pro 8888 - Super Light</span>
-                <span class="tw-float-right tw-text-gray-400">42EU - 8.5US</span>
-                <p class="tw-mt-auto tw-text-lg tw-font-bold">$238.99</p>
-              </div>
+       
+        <div class="tw-mt-10  tw-px-4 tw-pt-8 lg:tw-mt-0">
+          <form action="">
+            <!-- fields start -->
+          <div class="tw-py-4">
+            <p class="tw-text-xl ">Contact Information</p>
+           
+             
+              <div class="">
+                <label for="email" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm ">Email</label>
+                <input type="text" id="email" name="email" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3  tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="your.email@gmail.com" />
+                
+             
             </div>
           </div>
-      
-          <p class="tw-mt-8 tw-text-lg tw-font-medium">Shipping Methods</p>
-          <form class="tw-mt-5 tw-grid tw-gap-6">
-            <div class="tw-relative">
-              <input class="peer tw-hidden" id="radio_1" type="radio" name="radio" checked="">
-              <span class="peer-checked:tw-border-gray-700 tw-absolute tw-right-4 tw-top-1/2 tw-box-content tw-block tw-h-3 tw-w-3 tw--translate-y-1/2 tw-rounded-full tw-border-8 tw-border-gray-300 tw-bg-white"></span>
-              <label class="peer-checked:tw-border-2 peer-checked:tw-border-gray-700 peer-checked:tw-bg-gray-50 tw-flex tw-cursor-pointer tw-select-none tw-rounded-lg tw-border tw-border-gray-300 tw-p-4" for="radio_1">
-                <img class="tw-w-14 tw-object-contain" src="/images/naorrAeygcJzX0SyNI4Y0.png" alt="">
-                <div class="tw-ml-5">
-                  <span class="tw-mt-2 tw-font-semibold">Fedex Delivery</span>
-                  <p class="text-slate-500 tw-text-sm tw-leading-6">Delivery: 2-4 Days</p>
-                </div>
-              </label>
+          <!-- fields end -->
+            <!-- fields start -->
+          <div class="tw-py-4">
+            <p class="tw-text-xl "> Shipping information</p>
+           
+           
+             <div class="tw-grid tw-gird-cols-1 md:tw-grid-cols-2 tw-gap-3">
+             <!-- input start -->
+              <div class="">
+                <label for="fname" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm "> First name</label>
+                <input type="text" id="fname" name="fname" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3  tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="your  First name" />
+                              
+             
             </div>
-            <div class="tw-relative">
-              <input class="peer tw-hidden" id="radio_2" type="radio" name="radio" checked="">
-              <span class="checked:tw-border-gray-700 tw-absolute tw-right-4 tw-top-1/2 tw-box-content tw-block tw-h-3 tw-w-3 tw--translate-y-1/2 tw-rounded-full tw-border-8 tw-border-gray-300 tw-bg-white"></span>
-              <label class="peer-checked:tw-border-2 peer-checked:tw-border-gray-700 peer-checked:tw-bg-gray-50 tw-flex tw-cursor-pointer tw-select-none tw-rounded-lg tw-border tw-border-gray-300 tw-p-4" for="radio_2">
-                <img class="tw-w-14 tw-object-contain" src="/images/oG8xsl3xsOkwkMsrLGKM4.png" alt="">
-                <div class="tw-ml-5">
-                  <span class="tw-mt-2 tw-font-semibold">Fedex Delivery</span>
-                  <p class="text-slate-500 tw-text-sm tw-leading-6">Delivery: 2-4 Days</p>
-                </div>
-              </label>
+            <!-- input end -->
+             <!-- input start -->
+              <div class="">
+                <label for="lname" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm ">Last Name</label>
+                <input type="text" id="lname" name="lname" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3  tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="your Last name" />
+                
+             
             </div>
-          </form>
-        </div>
-        <div class="tw-mt-10 tw-bg-gray-50 tw-px-4 tw-pt-8 lg:tw-mt-0">
-          <p class="tw-text-xl tw-font-medium">Payment Details</p>
-          <p class="tw-text-gray-400">Complete your order by providing your payment details.</p>
-          <div class="">
-            <label for="email" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm tw-font-medium">Email</label>
-            <div class="tw-relative">
-              <input type="text" id="email" name="email" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3 tw-pl-11 tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-blue-500 focus:tw-ring-blue-500" placeholder="your.email@gmail.com" />
-              <div class="tw-pointer-events-none tw-absolute tw-inset-y-0 tw-left-0 tw-inline-flex tw-items-center tw-px-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-4 tw-w-4 tw-text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                </svg>
+            <!-- input end -->
+          </div>
+            <!-- input start -->
+            <div class="">
+              <label for="Company" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm "> Company</label>
+              <input type="text" id="Company" name="Company" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3  tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="Company" />
+                            
+           
+          </div>
+          <!-- input end -->
+            <!-- input start -->
+            <div class="">
+              <label for="Address" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm "> Address</label>
+              <input type="text" id="Address" name="Address" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3  tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="Address" />
+            
+          </div>
+          <!-- input end -->
+            <!-- input start -->
+            <div class="">
+              <label for="Apartment" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm "> Apartment, suite, etc.
+              </label>
+              <input type="text" id="Apartment" name="Apartment" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3  tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="Apartment, suite, etc." />
+            
+          </div>
+          <!-- input end -->
+          <div class="tw-grid tw-gird-cols-1 md:tw-grid-cols-2 tw-gap-3">
+            <!-- input start -->
+             <div class="">
+               <label for="City" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm "> City</label>
+               <input type="text" id="City" name="City" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3  tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="your  City" />
+                             
+            
+           </div>
+           <!-- input end -->
+            <!-- input start -->
+             <div class="">
+               <label for="City" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm ">Country</label>
+               <select type="text" id="City" name="City" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3  tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" >
+                <option value="">USA</option>
+                <option value="">Canada</option>
+                <option value="">Japan</option>
+                <option value="">China</option>
+               </select>
+               
+            
+           </div>
+           <!-- input end -->
+         </div>
+         <div class="tw-grid tw-gird-cols-1 md:tw-grid-cols-2 tw-gap-3">
+          <!-- input start -->
+           <div class="">
+             <label for="State" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm "> State / Province</label>
+             <input type="text" id="State" name="State" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3  tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="your  State / Province" />
+                           
+          
+         </div>
+         <!-- input end -->
+          <!-- input start -->
+           <div class="">
+             <label for="Postalcode" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm ">Postal code</label>
+             <input type="text" id="Postalcode" name="Postalcode" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3  tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="your  Postal code" />
+                           
+             
+          
+         </div>
+         <!-- input end -->
+       </div>
+          </div>
+          <!-- fields end -->
+            <!-- fields start -->
+            <div class="tw-py-4">
+              <p class="tw-text-xl  pb-4"> Delivery method</p>
+              <div class="tw-grid tw-gird-cols-1 md:tw-grid-cols-2 tw-gap-2">
+              <div class="tw-relative">
+                <input class="tw-peer tw-hidden" id="radio_1" type="radio" name="radio" checked />
+                <span class="peer-checked:tw-border-primary tw-absolute tw-right-4 tw-top-1/2 tw-box-content tw-block tw-h-3 tw-w-3 tw--translate-y-1/2 tw-rounded-full tw-border-8 tw-border-gray-300 tw-bg-white"></span>
+                <label class="peer-checked:tw-border-2 peer-checked:tw-border-primary peer-checked:tw-bg-gray-50 tw-flex tw-cursor-pointer tw-select-none tw-rounded-lg tw-border tw-border-gray-300 tw-p-4" for="radio_1">
+                  <img class="tw-w-14 tw-object-contain" src="https://componentland.com/images/naorrAeygcJzX0SyNI4Y0.png" alt="" />
+                  <div class="tw-ml-5">
+                    <span class="tw-mt-2 tw-font-medium">Fedex Delivery</span>
+                    <p class="text-slate-500 tw-text-sm tw-leading-6">Delivery: 2-4 Days</p>
+                  </div>
+                </label>
+              </div>
+              <div class="tw-relative">
+                <input class="tw-peer tw-hidden" id="radio_2" type="radio" name="radio" checked />
+                <span class="peer-checked:tw-border-primary tw-absolute tw-right-4 tw-top-1/2 tw-box-content tw-block tw-h-3 tw-w-3 tw--translate-y-1/2 tw-rounded-full tw-border-8 tw-border-gray-300 tw-bg-white"></span>
+                <label class="peer-checked:tw-border-2 peer-checked:tw-border-primary peer-checked:tw-bg-gray-50 tw-flex tw-cursor-pointer tw-select-none tw-rounded-lg tw-border tw-border-gray-300 tw-p-4" for="radio_2">
+                  <img class="tw-w-14 tw-object-contain" src="https://componentland.com/images/oG8xsl3xsOkwkMsrLGKM4.png" alt="" />
+                  <div class="tw-ml-5">
+                    <span class="tw-mt-2 tw-font-medium">Fedex Delivery</span>
+                    <p class="text-slate-500 tw-text-sm tw-leading-6">Delivery: 2-4 Days</p>
+                  </div>
+                </label>
+              </div>
               </div>
             </div>
-            <label for="card-holder" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm tw-font-medium">Card Holder</label>
+              <!-- fields -->
+            <!-- fields start -->
+            <div class="tw-py-4">
+          <p class="tw-text-xl ">Payment Details</p>
+         
+          <div class="">
+            
+            <label for="card-holder" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm ">Card Holder</label>
             <div class="tw-relative">
-              <input type="text" id="card-holder" name="card-holder" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3 tw-pl-11 tw-text-sm tw-uppercase tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-blue-500 focus:tw-ring-blue-500" placeholder="Your full name here" />
+              <input type="text" id="card-holder" name="card-holder" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3 tw-pl-11 tw-text-sm tw-uppercase tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="Your full name here" />
               <div class="tw-pointer-events-none tw-absolute tw-inset-y-0 tw-left-0 tw-inline-flex tw-items-center tw-px-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-4 tw-w-4 tw-text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
                 </svg>
               </div>
             </div>
-            <label for="card-no" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm tw-font-medium">Card Details</label>
+            <label for="card-no" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm ">Card Details</label>
             <div class="tw-flex">
               <div class="tw-relative tw-w-7/12 tw-flex-shrink-0">
-                <input type="text" id="card-no" name="card-no" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-2 tw-py-3 tw-pl-11 tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-blue-500 focus:tw-ring-blue-500" placeholder="xxxx-xxxx-xxxx-xxxx" />
+                <input type="text" id="card-no" name="card-no" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-2 tw-py-3 tw-pl-11 tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="xxxx-xxxx-xxxx-xxxx" />
                 <div class="tw-pointer-events-none tw-absolute tw-inset-y-0 tw-left-0 tw-inline-flex tw-items-center tw-px-3">
                   <svg class="tw-h-4 tw-w-4 tw-text-gray-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z" />
@@ -85,41 +165,69 @@
                   </svg>
                 </div>
               </div>
-              <input type="text" name="credit-expiry" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-2 tw-py-3 tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-blue-500 focus:tw-ring-blue-500" placeholder="MM/YY" />
-              <input type="text" name="credit-cvc" class="tw-w-1/6 tw-flex-shrink-0 tw-rounded-md tw-border tw-border-gray-200 tw-px-2 tw-py-3 tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-blue-500 focus:tw-ring-blue-500" placeholder="CVC" />
+              <input type="text" name="credit-expiry" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-2 tw-py-3 tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="MM/YY" />
+              <input type="text" name="credit-cvc" class="tw-w-1/6 tw-flex-shrink-0 tw-rounded-md tw-border tw-border-gray-200 tw-px-2 tw-py-3 tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="CVC" />
             </div>
-            <label for="billing-address" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm tw-font-medium">Billing Address</label>
+            <label for="billing-address" class="tw-mt-4 tw-mb-2 tw-block tw-text-sm ">Billing Address</label>
             <div class="tw-flex tw-flex-col sm:tw-flex-row">
               <div class="tw-relative tw-flex-shrink-0 sm:tw-w-7/12">
-                <input type="text" id="billing-address" name="billing-address" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3 tw-pl-11 tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-blue-500 focus:tw-ring-blue-500" placeholder="Street Address" />
+                <input type="text" id="billing-address" name="billing-address" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3 tw-pl-11 tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="Street Address" />
                 <div class="tw-pointer-events-none tw-absolute tw-inset-y-0 tw-left-0 tw-inline-flex tw-items-center tw-px-3">
                   <img class="tw-h-4 tw-w-4 tw-object-contain" src="https://flagpack.xyz/_nuxt/4c829b6c0131de7162790d2f897a90fd.svg" alt="" />
                 </div>
               </div>
-              <select type="text" name="billing-state" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3 tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-blue-500 focus:tw-ring-blue-500">
+              <select type="text" name="billing-state" class="tw-w-full tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3 tw-text-sm tw-shadow-sm tw-outline-none focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary">
                 <option value="State">State</option>
               </select>
-              <input type="text" name="billing-zip" class="tw-flex-shrink-0 tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3 tw-text-sm tw-shadow-sm tw-outline-none sm:tw-w-1/6 focus:tw-z-10 focus:tw-border-blue-500 focus:tw-ring-blue-500" placeholder="ZIP" />
+              <input type="text" name="billing-zip" class="tw-flex-shrink-0 tw-rounded-md tw-border tw-border-gray-200 tw-px-4 tw-py-3 tw-text-sm tw-shadow-sm tw-outline-none sm:tw-w-1/6 focus:tw-z-10 focus:tw-border-primary focus:tw-ring-primary" placeholder="ZIP" />
             </div>
       
             <!-- Total -->
             <div class="tw-mt-6 tw-border-t tw-border-b tw-py-2">
               <div class="tw-flex tw-items-center tw-justify-between">
-                <p class="tw-text-sm tw-font-medium tw-text-gray-900">Subtotal</p>
-                <p class="tw-font-semibold tw-text-gray-900">$399.00</p>
+                <p class="tw-text-sm  tw-text-gray-900">Subtotal</p>
+                <p class="tw-font-medium tw-text-gray-900">$399.00</p>
               </div>
               <div class="tw-flex tw-items-center tw-justify-between">
-                <p class="tw-text-sm tw-font-medium tw-text-gray-900">Shipping</p>
-                <p class="tw-font-semibold tw-text-gray-900">$8.00</p>
+                <p class="tw-text-sm  tw-text-gray-900">Shipping</p>
+                <p class="tw-font-medium tw-text-gray-900">$8.00</p>
               </div>
             </div>
             <div class="tw-mt-6 tw-flex tw-items-center tw-justify-between">
-              <p class="tw-text-sm tw-font-medium tw-text-gray-900">Total</p>
-              <p class="tw-text-2xl tw-font-semibold tw-text-gray-900">$408.00</p>
+              <p class="tw-text-sm  tw-text-gray-900">Total</p>
+              <p class="tw-text-2xl tw-font-medium tw-text-gray-900">$408.00</p>
             </div>
           </div>
-          <button class="tw-mt-4 tw-mb-8 tw-w-full tw-rounded-md tw-bg-gray-900 tw-px-6 tw-py-3 tw-font-medium tw-text-white">Place Order</button>
+          </div>
+          <div class="tw-text-center tw-py-4">
+
+            <button class="btn-primary">Place Order</button>
+          </div>
+        </form>
+        </div>
+        <div class="tw-px-4 tw-pt-8">
+          <p class="tw-text-xl ">Order Summary</p>
+          <p class="tw-text-gray-400">Check your items. And select a suitable shipping method.</p>
+          <div class="tw-mt-8 tw-space-y-3 tw-rounded-lg tw-border tw-bg-white tw-px-2 tw-py-4 sm:tw-px-6">
+            <div class="tw-flex tw-flex-col tw-rounded-lg tw-bg-white sm:tw-flex-row">
+              <img class="tw-m-2 tw-h-24 tw-w-28 tw-rounded-md tw-border tw-object-cover tw-object-center" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+              <div class="tw-flex tw-w-full tw-flex-col tw-px-4 tw-py-4">
+                <span class="tw-font-medium">Nike Air Max Pro 8888 - Super Light</span>
+                <span class="tw-float-right tw-text-gray-400">42EU - 8.5US</span>
+                <p class="tw-text-lg tw-font-bold">$138.99</p>
+              </div>
+            </div>
+            <div class="tw-flex tw-flex-col tw-rounded-lg tw-bg-white sm:tw-flex-row">
+              <img class="tw-m-2 tw-h-24 tw-w-28 tw-rounded-md tw-border tw-object-cover tw-object-center" src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+              <div class="tw-flex tw-w-full tw-flex-col tw-px-4 tw-py-4">
+                <span class="tw-font-medium">Nike Air Max Pro 8888 - Super Light</span>
+                <span class="tw-float-right tw-text-gray-400">42EU - 8.5US</span>
+                <p class="tw-mt-auto tw-text-lg tw-font-bold">$238.99</p>
+              </div>
+            </div>
+          </div>
       
+        
         </div>
       </div>
       
