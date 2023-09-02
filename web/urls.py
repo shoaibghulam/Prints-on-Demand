@@ -19,4 +19,7 @@ urlpatterns = [
     path('products',Products.as_view(),name="products"),
     path('single-product',SingleProduct.as_view(),name="single-product"),
     path('checkout',CheckOut.as_view(),name="checkout"),
+    path('savetofavorite',SaveToFavorite.as_view(),name="savetofavorite"),
+    path('delete-wishlist/<int:id>',DeleteWishlist.as_view(),name="delete-wishlist"),
+   
 ]

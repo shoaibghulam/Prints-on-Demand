@@ -119,19 +119,70 @@
                 <div class="tw-mt-6 tw-grid tw-grid-cols-1 tw-gap-x-6 tw-gap-y-10 sm:tw-grid-cols-1 lg:tw-grid-cols-3 ">
                   {% for data in data %}
                   <!-- item start -->
-                  <div class="tw-w-full tw-overflow-hidden tw-bg-white tw-shadow-md tw-rounded-xl tw-duration-500 hover:tw-scale-105 hover:tw-shadow-xl tw-relative" >
-                  
+                  <div class="tw-w-full tw-overflow-hidden tw-bg-white tw-shadow-md tw-rounded-xl tw-duration-500 hover:tw-scale-105 hover:tw-shadow-xl">
+                    <a href="/single-product">
                         <img src="{{data.url}}"
                                 alt="Product" class="tw-h-80 tw-w-72 tw-object-cover tw-rounded-t-xl" />
-                     <div class="tw-absolute top-3 tw-right-2">
-
-                       <i class="fa-regular fa-heart text-4xl tw-text-primary tw-cursor-pointer" id="icon{{forloop.counter}}" onclick="savetofavorite('{{data.url}}','icon{{forloop.counter}}')"></i>
-                     </div>
+                        <div class="tw-px-4 tw-py-3 tw-w-full">
+                            
+    
+    
+    
+    <p class="tw-text-f18 tw-font-bold tw-text-black tw-truncate tw-block tw-capitalize">Classic Matte Paper Wooden Framed Poster</p>
+                          
+                            <div class="tw-flex  tw-gap-2 tw-flex-col  tw-items-center">
+                                <p class="tw-text-f16 tw-font-semibold tw-text-black tw-cursor-auto ">Ready-to-hang available</p>
+                                <span class=" tw-mr-3 tw-uppercase tw-text-[12px]">Fulfilled in <span class="tw-font-bold">21 </span>  countries</span>    
+                               
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <!-- item end -->
                     {% endfor %}
                    
-                 
+                    <!-- item start -->
+                    <div class="tw-w-full tw-overflow-hidden tw-bg-white tw-shadow-md tw-rounded-xl tw-duration-500 hover:tw-scale-105 hover:tw-shadow-xl">
+                        <a href="/single-product">
+                            <img src="https://cdn.sanity.io/images/69l8b8xl/production/4317ed5af704b038eb2170cb8a0488b902dbd9d1-2245x1587.jpg?fm=webp"
+                                    alt="Product" class="tw-h-80 tw-w-72 tw-object-cover tw-rounded-t-xl" />
+                            <div class="tw-px-4 tw-py-3 tw-w-full">
+                                
+        
+        
+        
+        <p class="tw-text-f18 tw-font-bold tw-text-black tw-truncate tw-block tw-capitalize">Classic Matte Paper Wooden Framed Poster</p>
+                              
+                                <div class="tw-flex  tw-gap-2 tw-flex-col  tw-items-center">
+                                    <p class="tw-text-f16 tw-font-semibold tw-text-black tw-cursor-auto ">Ready-to-hang available</p>
+                                    <span class=" tw-mr-3 tw-uppercase tw-text-[12px]">Fulfilled in <span class="tw-font-bold">21 </span>  countries</span>    
+                                   
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- item end -->
+                    <!-- item start -->
+                    <div class="tw-w-full tw-overflow-hidden tw-bg-white tw-shadow-md tw-rounded-xl tw-duration-500 hover:tw-scale-105 hover:tw-shadow-xl">
+                        <a href="/single-product">
+                            <img src="https://cdn.sanity.io/images/69l8b8xl/production/4317ed5af704b038eb2170cb8a0488b902dbd9d1-2245x1587.jpg?fm=webp"
+                                    alt="Product" class="tw-h-80 tw-w-72 tw-object-cover tw-rounded-t-xl" />
+                            <div class="tw-px-4 tw-py-3 tw-w-full">
+                                
+        
+        
+        
+        <p class="tw-text-f18 tw-font-bold tw-text-black tw-truncate tw-block tw-capitalize">Classic Matte Paper Wooden Framed Poster</p>
+                              
+                                <div class="tw-flex  tw-gap-2 tw-flex-col  tw-items-center">
+                                    <p class="tw-text-f16 tw-font-semibold tw-text-black tw-cursor-auto ">Ready-to-hang available</p>
+                                    <span class=" tw-mr-3 tw-uppercase tw-text-[12px]">Fulfilled in <span class="tw-font-bold">21 </span>  countries</span>    
+                                   
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- item end -->
                 </div>
             </div>
         </div>
@@ -142,35 +193,3 @@
   
   
 {% endblock body %}
-{% block script %}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script>
-
-
-  function savetofavorite(image,icon){
-    console.log(image)
-    // alert(e)
-    $.ajax({
-            url: "/savetofavorite", // Replace with your server endpoint URL
-            type: "GET", // Use POST or GET as needed
-            data: {
-              image:image
-            },
-            success: function(response) {
-                // Handle the response from the server
-                // console.log("Server Response:", response);
-               
-                $(`#${icon}`).removeClass('fa-regular')
-                $(`#${icon}`).addClass('fa-solid')
-            },
-            error: function(xhr, textStatus, errorThrown) {
-                // Handle errors here
-                console.error("Error:", errorThrown);
-            }
-        });
-  }
-
-</script>
-  
-{% endblock script %}

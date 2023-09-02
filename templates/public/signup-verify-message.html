@@ -1,0 +1,22 @@
+{% extends "public/layout/auth.html" %}
+{% load static %}
+
+{% block action_btn %}
+  <p>Already a member?</p>
+  <a href="/login" class="tw-underline">Login</a>
+{% endblock action_btn %}
+
+{% block content %}
+<div class="tw-flex tw-flex-col tw-items-center tw-justify-center tw-h-full">
+
+    <h3 class="tw-my-4 tw-text-2xl tw-font-semibold tw-text-gray-700">Please Verify Your Account</h3>
+</div>
+
+{% endblock content %}
+{% block script %}
+  <script>
+    setTimeout(()=>{
+         window.location.href='/'
+    },3000)
+  </script>
+{% endblock script %}

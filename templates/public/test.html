@@ -1,0 +1,17 @@
+{% extends "public/layout/base.html" %}
+{% load static %}
+{% block body %}
+<section>
+    <div class=" tw-bg-gray-100 tw-pt-20" style="min-height: calc(100vh - 140px);">
+        <h1 class="tw-mb-10 tw-text-center tw-text-f35 tw-font-bold">Shopping Cart
+        </h1>
+        <div class="tw-mx-auto tw-max-w-5xl tw-justify-center tw-px-6 md:tw-flex md:tw-space-x-6 xl:tw-px-0">
+          {% for data in data %}
+            <!-- <h1>{{data.url}}</h1> -->
+            <img src="{{data.url}}" alt="" width="300px">
+          {% endfor %}
+        </div>
+      </div>
+</section>
+  
+{% endblock body %}

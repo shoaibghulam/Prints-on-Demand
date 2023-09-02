@@ -12,6 +12,8 @@ import random
 from django.contrib import messages
 from .models import *
 from django.core.files.base import ContentFile
+from PIL import Image
+import io
 
 openai.api_key ="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"
 
@@ -100,9 +102,7 @@ class Dashboard(View):
 
 class Profile(View):
     def get(self, request):
-        data= UserModel.objects.get(pk=request.session['pk'])
-      
-        return render(request, 'public/profile.html',{"data":data})
+        return render(request, 'public/profile.html')
 
 class EditProfile(View):
     def get(self, request):
@@ -115,18 +115,7 @@ class SavedAddress(View):
 
 class Wishlist(View):
     def get(self, request):
-        data= SaveToFavoriteModel.objects.filter(user=request.session['pk'])
-        print(data)
-        return render(request, 'public/wishlist.html',{'data':data})
-
-class DeleteWishlist(View):
-    def get(self, request,id):
-        print(id)
-        data= SaveToFavoriteModel.objects.get(user=request.session['pk'],pk=id)
-        data.delete()
-
-        messages.success(request,"Wishlist deleted Successfully")
-        return redirect('/whishlist')
+        return render(request, 'public/wishlist.html')
 
 class Orders(View):
     def get(self, request):
@@ -140,13 +129,27 @@ class Products(View):
         prompt=search,
         
         n=6,
-        size="512x512"
+        size="1024x1024"
         )
         print(response['data'])
         image_url = response['data'][0]['url']
         print(image_url)
         
-    
+        print(search)
+        data=[{
+  "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-snt5tbcGuQHSaVtFOiWdWDJb/user-hloT6COcAsLpSEjtiOwZb9xY/img-f2vgjiPQQJs3yBsXGyorox3p.png?st=2023-09-01T21%3A33%3A49Z&se=2023-09-01T23%3A33%3A49Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-09-01T06%3A08%3A25Z&ske=2023-09-02T06%3A08%3A25Z&sks=b&skv=2021-08-06&sig=Op/2YzpSW3Pmx4y8yjmE9cnOlMCOHAazlZYKvVkK4Ho%3D"
+}, {
+  "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-snt5tbcGuQHSaVtFOiWdWDJb/user-hloT6COcAsLpSEjtiOwZb9xY/img-1w2PJ5GaD0SFULMYavSx0U0H.png?st=2023-09-01T21%3A33%3A49Z&se=2023-09-01T23%3A33%3A49Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-09-01T06%3A08%3A25Z&ske=2023-09-02T06%3A08%3A25Z&sks=b&skv=2021-08-06&sig=QBxjAJQGgN5p3POs4LROu0oR6/EqN9A7DUaJx/c9v9I%3D"
+}, {
+  "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-snt5tbcGuQHSaVtFOiWdWDJb/user-hloT6COcAsLpSEjtiOwZb9xY/img-Zug156LBAFoLjdcVHdEq3Nrt.png?st=2023-09-01T21%3A33%3A48Z&se=2023-09-01T23%3A33%3A48Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-09-01T06%3A08%3A25Z&ske=2023-09-02T06%3A08%3A25Z&sks=b&skv=2021-08-06&sig=nQNqi/JqmyD9fjrnChs1PbFK0LvLK67I7sU9OP6xVt0%3D"
+},{
+  "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-snt5tbcGuQHSaVtFOiWdWDJb/user-hloT6COcAsLpSEjtiOwZb9xY/img-LP4EaZbHo45mVgcyJE4Sq4QC.png?st=2023-09-01T21%3A33%3A49Z&se=2023-09-01T23%3A33%3A49Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-09-01T06%3A08%3A25Z&ske=2023-09-02T06%3A08%3A25Z&sks=b&skv=2021-08-06&sig=T9cr04oO%2BksmUMiAIURar2iNhh3RfiZ4WW39avjoHVY%3D"
+}, {
+  "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-snt5tbcGuQHSaVtFOiWdWDJb/user-hloT6COcAsLpSEjtiOwZb9xY/img-uhCC2nDGPGoordUg17n9cyWj.png?st=2023-09-01T21%3A33%3A49Z&se=2023-09-01T23%3A33%3A49Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-09-01T06%3A08%3A25Z&ske=2023-09-02T06%3A08%3A25Z&sks=b&skv=2021-08-06&sig=nwL42xIEIM0quSYqkD2XOqXXX/N%2BwAs79S7Yo2ap6FY%3D"
+},{
+  "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-snt5tbcGuQHSaVtFOiWdWDJb/user-hloT6COcAsLpSEjtiOwZb9xY/img-lzfobAMyIPc72vQ95Yt6GiQM.png?st=2023-09-01T21%3A33%3A48Z&se=2023-09-01T23%3A33%3A48Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-09-01T06%3A08%3A25Z&ske=2023-09-02T06%3A08%3A25Z&sks=b&skv=2021-08-06&sig=wsbVDRbPPIIn4MoSLebem/gPdfbRwSNcXtnTSPJF4nM%3D"
+}]
+        # return render(request, 'public/product.html',{"data":data})
         return render(request, 'public/product.html',{"data":response['data']})
 
 class SingleProduct(View):
@@ -162,25 +165,33 @@ class CheckOut(View):
 
 class SaveToFavorite(View):
     def get(self, request):
-     try:
+    #  try:
         # Download the file from the URL
         url= request.GET.get('image')
+        print(url)
         response = requests.get(url)
-        print(response)
+        image_content = response.content
+
+        # Use Pillow to open and convert the image to PNG
+        image = Image.open(io.BytesIO(image_content))
+        image = image.convert("RGBA")
+
+        # Save the converted image as bytes
+        with io.BytesIO() as output:
+            image.save(output, format="PNG")
+            png_content = output.getvalue()
+
         if response.status_code == 200:
             user= UserModel.objects.get(pk=request.session["pk"])
-            image = SaveToFavoriteModel(user=user)
+            saveimg = SaveToFavoriteModel(user=user)
 
             # Set the image file data
-            image.image_file.save(os.path.basename(url+".png"), ContentFile(response.content))
-            image.save()
-            return JsonResponse({
-                "message": "Image saved successfully",
-                "status": True,
-            })
+            saveimg.image_file.save(os.path.basename(url+".png"), ContentFile(png_content), save=True)
+            saveimg.save()
+            return HttpResponse("Hello, world!")
 
-     except Exception as e:
-         print(f"Error downloading and storing file: {e}")
+    #  except Exception as e:
+        #  print(f"Error downloading and storing file: {e}")
 
     # Handle errors or invalid requests
-     return HttpResponse('error_page') 
+        return HttpResponse('error_page') 

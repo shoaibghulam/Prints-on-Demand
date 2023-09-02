@@ -55,7 +55,7 @@ Account - Profile
                         Full Name
                     </td>
                     <td class="tw-px-6 tw-py-4">
-                        Jhon Deo
+                      {{data.first_name}} {{data.last_name}}
                     </td>
                   
                 </tr>
@@ -65,7 +65,7 @@ Account - Profile
                         Mobile Number	
                     </td>
                     <td class="tw-px-6 tw-py-4">
-                        +99-85XXXXXXXX
+                        +99-84343433
                     </td>
                   
                 </tr>
@@ -75,7 +75,7 @@ Account - Profile
                         Email ID	
                     </td>
                     <td class="tw-px-6 tw-py-4">
-                        name@example.com
+                       {{data.email}}
                     </td>
                   
                 </tr>
@@ -106,7 +106,8 @@ Account - Profile
                         Location	
                     </td>
                     <td class="tw-px-6 tw-py-4">
-                        United Kingdom
+                        {{data.street_address}} {{data.city}}
+                              {{data.country}}
                     </td>
                   
                 </tr>

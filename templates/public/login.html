@@ -2,11 +2,14 @@
 {% load static %}
 {% block content %}
 <h3 class="tw-my-4 tw-text-2xl tw-font-roboto tw-font-semibold tw-text-gray-700 ">Account Login</h3>
-<form action="" method="post" class="tw-flex tw-flex-col tw-space-y-5">
+{% for message in messages %}
+<p class="tw-py-3 tw-bg-primary tw-text-white tw-rounded-lg tw-px-3 tw-text-center">{{ message }}</p>
+{% endfor %}
+<form action="/login" method="post" class="tw-flex tw-flex-col tw-space-y-5">
     {% csrf_token %}
     <div class="tw-flex tw-flex-col tw-space-y-1">
         <label for="email" class="tw-text-sm tw-font-semibold tw-text-gray-500">Email address</label>
-        <input type="email" id="email" autofocus
+        <input type="email" name="email" id="email" autofocus
             class="tw-px-4 tw-py-2 tw-transition tw-duration-300 tw-border tw-border-gray-300 tw-rounded focus:tw-border-transparent focus:tw-outline-none focus:tw-ring-4 focus:tw-ring-blue-200" />
     </div>
     <div class="tw-flex tw-flex-col tw-space-y-1">
@@ -15,7 +18,7 @@
             <a href="{% url 'forget-password' %}" class="tw-text-sm tw-text-primary hover:tw-underline focus:tw-text-red-600">Forgot
                 Password?</a>
         </div>
-        <input type="password" id="password"
+        <input type="password" name="password" id="password"
             class="tw-px-4 tw-py-2 tw-transition tw-duration-300 tw-border tw-border-gray-300 tw-rounded focus:tw-border-transparent focus:tw-outline-none focus:tw-ring-4 focus:tw-ring-blue-200" />
     </div>
     <div class="tw-flex tw-items-center tw-space-x-2">

@@ -18,7 +18,7 @@
               No cost, no hassle, no risk.
           </p>
 
-          <form action="/products" class="tw-max-w-3xl tw-mx-auto">   
+          <form action="/products" method="get" class="tw-max-w-3xl tw-mx-auto">   
               <label for="default-search" class="tw-mb-2 tw-text-sm tw-font-medium tw-text-gray-900 tw-sr-only dark:tw-text-white">Search</label>
               <div class="tw-relative">
                   <div class="tw-absolute tw-inset-y-0 tw-left-0 tw-flex tw-items-center tw-pl-3 tw-pointer-events-none">
@@ -26,7 +26,7 @@
                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
                       </svg>
                   </div>
-                  <input type="search" id="default-search" class="tw-block tw-w-full tw-p-4 tw-pl-10 tw-text-sm tw-text-gray-900 tw-border tw-border-gray-300 tw-rounded-lg tw-bg-gray-50 focus:tw-ring-primary focus:tw-border-primary dark:tw-bg-gray-700 dark:tw-border-gray-600 dark:tw-placeholder-gray-400 dark:tw-text-white dark:focus:tw-ring-primary dark:focus:tw-border-primary" placeholder="What's in your mind?" required="">
+                  <input type="search" name="search" id="default-search" class="tw-block tw-w-full tw-p-4 tw-pl-10 tw-text-sm tw-text-gray-900 tw-border tw-border-gray-300 tw-rounded-lg tw-bg-gray-50 focus:tw-ring-primary focus:tw-border-primary dark:tw-bg-gray-700 dark:tw-border-gray-600 dark:tw-placeholder-gray-400 dark:tw-text-white dark:focus:tw-ring-primary dark:focus:tw-border-primary" placeholder="What's in your mind?" required="">
                   <button type="submit" class="tw-text-white tw-absolute tw-right-2.5 tw-bottom-2.5 tw-bg-primary hover:tw-bg-primary focus:tw-ring-4 focus:tw-outline-none focus:tw-ring-blue-300 tw-font-medium tw-rounded-lg tw-text-sm tw-px-4 tw-py-2 dark:tw-bg-primary dark:hover:tw-bg-primary dark:focus:tw-ring-primary">Generate</button>
               </div>
           </form>
