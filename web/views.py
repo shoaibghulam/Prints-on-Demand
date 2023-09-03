@@ -5,13 +5,15 @@ import openai
 from django.http import JsonResponse
 import os
 import requests
-from django.core.files.storage import FileSystemStorage
 from django.conf import settings
-from .mail import sendEmail
+from django.core.mail import EmailMessage
+from django.template.loader import render_to_string
 import random
 from django.contrib import messages
 from .models import *
 from django.core.files.base import ContentFile
+from .helper import login_required
+from django.utils.decorators import method_decorator
 
 openai.api_key ="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"
 
@@ -32,7 +34,8 @@ class Contact(View):
 
 class Login(View):
     def get(self, request):
-       
+        if request.session['login']:
+            return redirect("/dashboard")
         return render(request,"public/login.html")
     def post(self, request):
          email=request.POST['email']
@@ -43,7 +46,10 @@ class Login(View):
                 if handler.verify(password,user[0].password):
                     request.session["login"] =True
                     request.session["pk"] =user[0].pk
+                    request.session["email"] =user[0].email
                     messages.success(request,"Successfully Login")
+                    user[0].is_active=True
+                    user[0].save()
                     return redirect("/dashboard")
                 else:
                     messages.error(request,"please enter email and password")
@@ -57,8 +63,7 @@ class Login(View):
 
 class Signup(View):
     def get(self, request):
-        data=sendEmail("shoaibghulam@gmail.com")
-        print(data)
+       
         return render(request,"public/signup.html")
     def post(self, request):
         first_name = request.POST["first_name"]
@@ -68,14 +73,60 @@ class Signup(View):
         token=random.randint(1000, 9999)
         addData= UserModel(first_name=first_name, last_name=last_name, email=email, password=password,email_verification_token=token)
         addData.save()
-        print(request.POST)
+        userInfo={
+            "id": addData.pk,
+            "name": f"{addData.first_name} {addData.last_name}",
+            "token": addData.email_verification_token
+        }
+        html_template = 'email/verification.html'
+        html_message = render_to_string(html_template, context=userInfo)
+        subject = "Please Verify Your Account"
+        email_from ="info@developerwings.com"
+        recipient_list = [addData.email]
+
+        message = EmailMessage(subject, html_message, email_from, recipient_list)
+        message.content_subtype = 'html'
+        message.send()
         return render(request, 'public/signup-verify-message.html')
 
+
+class VerifyAccount(View):
+    def get(self,request,id,token):
+        verify=UserModel.objects.get(pk=id,email_verification_token=token)
+        if verify:
+            verify.is_email_verified=True
+            verify.email_verification_token=""
+            verify.save()
+        messages.success(request,"Your account has been verified successfully")
+        return redirect("/login")
 
 class ForgetPassword(View):
     def get(self, request):
        
         return render(request,"public/forget-password.html")
+    
+    def post(self, request):
+        email=request.POST.get('email')
+        user=UserModel.objects.get(email=email)
+        user.email_verification_token=random.randint(1000, 9999)
+        user.save()
+        userInfo={
+            "id": user.pk,
+            "name": f"{user.first_name} {user.last_name}",
+            "token": user.email_verification_token
+        }
+        html_template = 'email/forget-password.html'
+        html_message = render_to_string(html_template, context=userInfo)
+        subject = "Please Reset Your Account Password"
+        email_from ="info@developerwings.com"
+        recipient_list = [user.email]
+
+        message = EmailMessage(subject, html_message, email_from, recipient_list)
+        message.content_subtype = 'html'
+        message.send()
+        messages.success(request,"Reset Password Link Sent to your email address")
+        return redirect('/login')
+
  
 class ResetPassword(View):
     def get(self, request):
@@ -85,15 +136,40 @@ class ResetPassword(View):
 
 class LogOut(View):
     def get(self, request):
-        if request.session.has_key('login'):
+        if request.session.has_key('login') and request.session.has_key('pk'):
+            user=UserModel.objects.get(pk=request.session['pk'])
+            user.is_active=False
+            user.save()
             del request.session['login']
-            return redirect("/")
+            del request.session["pk"] 
+            del request.session["email"]
+            messages.success(request,"Successfully Log Out")
         
+            return redirect("/login")
+        
+class ResetPassword(View):
+    def get(self, request,id,token):
+       return render(request, "public/password-reset.html",{'id':id,'token':token})
+    
+    def post(self, request,id,token):
+        user=UserModel.objects.get(pk=id,email_verification_token=token)
+        if user:
+            user.password=handler.hash(request.POST.get('password'))
+            user.email_verification_token=""
+            user.save()
+            messages.success(request,"your password has been reset successfully")
+            return redirect('/login')
+        else:
+            messages.success(request,"your Token has been expired")
+            return redirect('/login')
 
+    
 class Cart(View):
     def get(self, request):
         return render(request, 'public/cart.html')
+    
 
+@method_decorator(login_required, name='dispatch')
 class Dashboard(View):
     def get(self, request):
         return render(request, 'public/dashboard.html')

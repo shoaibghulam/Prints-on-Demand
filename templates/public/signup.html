@@ -8,7 +8,7 @@
 
 {% block content %}
 <h3 class="tw-my-4 tw-text-2xl tw-font-semibold tw-text-gray-700">Register Account</h3>
-<form action="/signup" method="post" class="tw-flex tw-flex-col tw-space-y-5">
+<form action="/signup" method="post" class="tw-flex tw-flex-col tw-space-y-5" id="form">
     {% csrf_token %}
     <!-- input start -->
     <div class="tw-flex tw-flex-col tw-space-y-1">
@@ -56,3 +56,8 @@
 
 </form>
 {% endblock content %}
+
+{% block script %}
+<script src="{% static 'main/validation.js' %}"></script>
+
+{% endblock script %}

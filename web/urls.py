@@ -21,5 +21,7 @@ urlpatterns = [
     path('checkout',CheckOut.as_view(),name="checkout"),
     path('savetofavorite',SaveToFavorite.as_view(),name="savetofavorite"),
     path('delete-wishlist/<int:id>',DeleteWishlist.as_view(),name="delete-wishlist"),
+    path('verification/<int:id>/<str:token>',VerifyAccount.as_view(),name="verification"),
+    path('reset/<int:id>/<str:token>',ResetPassword.as_view(),name="reset"),
    
 ]
