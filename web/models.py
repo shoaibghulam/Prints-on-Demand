@@ -5,7 +5,7 @@ class UserModel(models.Model):
     is_active = models.BooleanField(default=True)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    email = models.EmailField(unique=True)
+    email = models.CharField(max_length=255)
     password = models.TextField(max_length=755)  
     profile = models.ImageField(upload_to='profile_images/', blank=True) 
     house_no = models.CharField(max_length=255, blank=True)  

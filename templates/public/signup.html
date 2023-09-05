@@ -8,6 +8,9 @@
 
 {% block content %}
 <h3 class="tw-my-4 tw-text-2xl tw-font-semibold tw-text-gray-700">Register Account</h3>
+{% for message in messages %}
+<p class="tw-py-3 tw-bg-primary tw-text-white tw-rounded-lg tw-px-3 tw-text-center">{{ message }}</p>
+{% endfor %}
 <form action="/signup" method="post" class="tw-flex tw-flex-col tw-space-y-5" id="form">
     {% csrf_token %}
     <!-- input start -->
@@ -29,6 +32,9 @@
         <label for="email" class="tw-text-sm tw-font-semibold tw-text-gray-500">Email</label>
         <input type="email" name="email" id="email" 
             class="tw-px-4 tw-py-2 tw-transition tw-duration-300 tw-border tw-border-gray-300 tw-rounded focus:tw-border-transparent focus:tw-outline-none focus:tw-ring-4 focus:tw-ring-blue-200" required/>
+            {% for message in messages %}
+<p class="tw-text-primary">{{ message }}</p>
+{% endfor %}
     </div>
     <!-- input end -->
     <!-- input start -->

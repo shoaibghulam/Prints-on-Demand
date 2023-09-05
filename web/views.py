@@ -34,7 +34,7 @@ class Contact(View):
 
 class Login(View):
     def get(self, request):
-        if request.session['login']:
+        if request.session.has_key("login"):
             return redirect("/dashboard")
         return render(request,"public/login.html")
     def post(self, request):
@@ -71,22 +71,27 @@ class Signup(View):
         email = request.POST['email']
         password = handler.hash(request.POST["password"])
         token=random.randint(1000, 9999)
-        addData= UserModel(first_name=first_name, last_name=last_name, email=email, password=password,email_verification_token=token)
-        addData.save()
-        userInfo={
-            "id": addData.pk,
-            "name": f"{addData.first_name} {addData.last_name}",
-            "token": addData.email_verification_token
-        }
-        html_template = 'email/verification.html'
-        html_message = render_to_string(html_template, context=userInfo)
-        subject = "Please Verify Your Account"
-        email_from ="info@developerwings.com"
-        recipient_list = [addData.email]
+        checkUser=UserModel.objects.filter(email=email)
+        if not checkUser:
+            addData= UserModel(first_name=first_name, last_name=last_name, email=email, password=password,email_verification_token=token)
+            addData.save()
+            userInfo={
+                "id": addData.pk,
+                "name": f"{addData.first_name} {addData.last_name}",
+                "token": addData.email_verification_token
+            }
+            html_template = 'email/verification.html'
+            html_message = render_to_string(html_template, context=userInfo)
+            subject = "Please Verify Your Account"
+            email_from ="info@developerwings.com"
+            recipient_list = [addData.email]
 
-        message = EmailMessage(subject, html_message, email_from, recipient_list)
-        message.content_subtype = 'html'
-        message.send()
+            message = EmailMessage(subject, html_message, email_from, recipient_list)
+            message.content_subtype = 'html'
+            message.send()
+        else:
+            messages.success(request,"Email Address Already Exists")
+            return redirect('/signup')
         return render(request, 'public/signup-verify-message.html')
 
 
